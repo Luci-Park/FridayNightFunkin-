@@ -1,0 +1,4 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+'*.bmp' text !filter !merge !diff
+'*.wav' text !filter !merge !diff
