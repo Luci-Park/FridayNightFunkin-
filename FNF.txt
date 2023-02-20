@@ -1,0 +1,36 @@
+Song .jsons
+	song
+		player2 = opponent
+		player1 = player
+		speed = the speed multiplier of chart
+		needsVoices = bool of load voice file
+		sectionLengths = nothing
+		song = the name of song
+		notes = is divided into sections
+			mustHitSection = if true, focus on player1, else focus on player2
+			typeOfSection = nothing
+			lengthInSteps = nothing
+			sectionNotes
+				start milliseconds
+				targetColumn(left down up right)
+				hold time in milliseconds
+Scene
+	- backgrounds
+		- Animation is also controlled by bpm
+	- player1, 2
+	- note charts
+		- columns = 0 ~ 3 for player 1, 4 ~ 7 for player 2
+		- create notes in milliseconds away. how to calc? I have no idea...
+		- bpm이 컨트롤 해야 할 부분이지..
+
+Player
+	- should have camera position
+	- Animation
+		- idle
+		- left
+		- down
+		- up
+		- right
+		- animation speed is affected by bpm
+	- Inputs should affect Animation & note pressing => send message
+	- Playable을 나눠놔야 나중에 multiplayer가능하지 않을까.
