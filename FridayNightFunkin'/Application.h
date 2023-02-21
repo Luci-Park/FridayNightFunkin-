@@ -19,9 +19,14 @@ namespace fnf
 		HWND mHwnd;
 		HDC mHdc;
 
+		HBITMAP mBackBuffer;
+		HDC mBackHDC;
+
+		UINT mWidth;
+		UINT mHeight;
+
 		Vector2 mPos;
 
-		//Scene mScene[256];
 	};
 }
 
