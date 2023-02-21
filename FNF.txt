@@ -15,6 +15,48 @@ Song .jsons
 				targetColumn(left down up right)
 				hold time in milliseconds
 Scene
+	- Title
+		- Timed words
+			- Creators Present
+			- Associated with newgrounds
+			- Friday Night Funkin
+			- Etc - Mocked by Sumin Park
+			- Press Enter to Begin
+		- Enter = Main Menu Scene
+		- Also Enter before last = Skip to Begin
+	- Main Menu
+		- Menu
+			- Story Mode
+			- FreePlay
+			- Donate
+		- moves with up down/w, s
+		- enter to select
+		- 
+	- Options
+		- Controls : WASD, Arrows, DFJK, ASKL
+		- FPS Counter
+		- //Down Scroll
+		- Turn on AI
+		- Enable Multiplayer
+	- Story Mode
+		- Show Tracks,
+		- Opponent Image
+		- Normal , Easy, Hard
+		- Name on top
+		- Show score
+		- On Enter The name Anmation
+	- Ingame
+		- ESC
+			-Resume
+			- Restart
+			- Change Difficulty
+			- Pause Menu
+			- Name of Song
+			- Difficulty
+			- Death Count
+			- Toggle AI
+			- Exit Menu
+
 	- backgrounds
 		- Animation is also controlled by bpm
 	- player1, 2
