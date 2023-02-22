@@ -116,7 +116,7 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FridayNightFunkin%27.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
     <ClCompile Include="Entity.cpp">
