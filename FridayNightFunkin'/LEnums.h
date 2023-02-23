@@ -1,13 +1,14 @@
 #pragma once
 enum class eSceneType
 {
+	Splash,
 	Title,
-	ModeSelect,
-	ChooseLevel,
-	Play,
-	Level1,
-	Level2,
-	Level3,
+	Options,
+	StoryMode,
+	Tutorial,
+	Week1,
+	Week3,
+	Week4,
 	SIZE
 };
 
@@ -16,10 +17,9 @@ enum class eLayerType
 {
 	Background,
 	BackgroundCharacters,
-	Player,
-	Opponent,
+	Player1,
+	Player2,
 	Notes,
 	UI,
-	TEST,
 	SIZE
 };
