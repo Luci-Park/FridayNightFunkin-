@@ -3,7 +3,7 @@
 
 #include "framework.h"
 #include "FridayNightFunkin'.h"
-#include "Application.h"
+#include "LApplication.h"
 
 #define MAX_LOADSTRING 100
 
@@ -66,6 +66,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         }
     }
 
+    application.Release();
     return (int) msg.wParam;
 }
 
