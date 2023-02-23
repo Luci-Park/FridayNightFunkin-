@@ -128,35 +128,41 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Application.h" />
+    <ClInclude Include="LApplication.h" />
     <ClInclude Include="CommonInclude.h" />
-    <ClInclude Include="Component.h" />
-    <ClInclude Include="Engine.h" />
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="Enums.h" />
+    <ClInclude Include="LComponent.h" />
+    <ClInclude Include="LuciEngine.h" />
+    <ClInclude Include="LEntity.h" />
+    <ClInclude Include="LEnums.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="FridayNightFunkin%27.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="Input.h" />
-    <ClInclude Include="Layer.h" />
+    <ClInclude Include="LGameObject.h" />
+    <ClInclude Include="LImage.h" />
+    <ClInclude Include="LInput.h" />
+    <ClInclude Include="LLayer.h" />
+    <ClInclude Include="LResource.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="Scene.h" />
-    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="LResources.h" />
+    <ClInclude Include="LScene.h" />
+    <ClInclude Include="LSceneManager.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Math.h" />
-    <ClInclude Include="Time.h" />
+    <ClInclude Include="LMath.h" />
+    <ClInclude Include="LTime.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Component.cpp" />
-    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="LComponent.cpp" />
+    <ClCompile Include="LEntity.cpp" />
+    <ClCompile Include="LImage.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Application.cpp" />
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="Layer.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="Time.cpp" />
+    <ClCompile Include="LApplication.cpp" />
+    <ClCompile Include="LGameObject.cpp" />
+    <ClCompile Include="LInput.cpp" />
+    <ClCompile Include="LLayer.cpp" />
+    <ClCompile Include="LResource.cpp" />
+    <ClCompile Include="LResources.cpp" />
+    <ClCompile Include="LScene.cpp" />
+    <ClCompile Include="LSceneManager.cpp" />
+    <ClCompile Include="LTime.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FridayNightFunkin%27.rc" />

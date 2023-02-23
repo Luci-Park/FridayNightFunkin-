@@ -3,7 +3,7 @@
 
 #include "framework.h"
 #include "FridayNightFunkin'.h"
-#include "Application.h"
+#include "LApplication.h"
 
 #define MAX_LOADSTRING 100
 

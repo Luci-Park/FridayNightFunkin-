@@ -1,6 +1,6 @@
 #pragma once
-#include "Entity.h"
-#include "Component.h"
+#include "LEntity.h"
+#include "LComponent.h"
 namespace fnf
 {
 	class GameObject : public Entity

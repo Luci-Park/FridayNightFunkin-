@@ -1,8 +1,8 @@
-#include "SceneManager.h"
+#include "LSceneManager.h"
 namespace fnf
 {
 	std::vector<Scene*> SceneManager::mScenes = {};
-	static Scene* mActiveScene;
+	Scene* SceneManager::mActiveScene = nullptr;
 	void SceneManager::Initialize()
 	{
 		mScenes.resize((UINT)eSceneType::SIZE);
@@ -18,12 +18,14 @@ namespace fnf
 
 	void SceneManager::Update()
 	{
-		mActiveScene->Update();
+		if(mActiveScene != nullptr)
+			mActiveScene->Update();
 	}
 
 	void SceneManager::Render(HDC hdc)
 	{
-		mActiveScene->Render(hdc);
+		if (mActiveScene != nullptr)
+			mActiveScene->Render(hdc);
 	}
 
 	void SceneManager::Release()
@@ -38,7 +40,8 @@ namespace fnf
 	}
 	void SceneManager::LoadScene(eSceneType type)
 	{
-		mActiveScene->OnExit();
+		if (mActiveScene != nullptr)
+			mActiveScene->OnExit();
 		mActiveScene = mScenes[(UINT)type];
 		mActiveScene->OnEnter();
 	}

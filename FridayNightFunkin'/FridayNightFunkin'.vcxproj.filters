@@ -8,10 +8,6 @@
     <Filter Include="Main">
       <UniqueIdentifier>{a1dab0df-ce36-40d0-9fcc-930081bdbded}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main\헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Engine">
       <UniqueIdentifier>{bd416fc4-08c7-4268-9bc7-21cbcbb16162}</UniqueIdentifier>
     </Filter>
@@ -48,58 +44,70 @@
     <Filter Include="Contents\Scene">
       <UniqueIdentifier>{93691678-c80c-489c-959f-049748637b23}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Resource">
+      <UniqueIdentifier>{46453165-0c59-429c-8fd0-21279e2c1db3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Main\헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Main\헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Main\헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="FridayNightFunkin%27.h">
       <Filter>Main</Filter>
     </ClInclude>
     <ClInclude Include="CommonInclude.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="Engine.h">
+    <ClInclude Include="LuciEngine.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="Math.h">
+    <ClInclude Include="LMath.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="Enums.h">
+    <ClInclude Include="LEnums.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="Entity.h">
+    <ClInclude Include="LEntity.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="Application.h">
+    <ClInclude Include="LApplication.h">
       <Filter>Engine\High Level Interface</Filter>
     </ClInclude>
-    <ClInclude Include="Scene.h">
+    <ClInclude Include="LScene.h">
       <Filter>Engine\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="SceneManager.h">
+    <ClInclude Include="LSceneManager.h">
       <Filter>Engine\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Time.h">
+    <ClInclude Include="LTime.h">
       <Filter>Engine\Time</Filter>
     </ClInclude>
-    <ClInclude Include="Layer.h">
+    <ClInclude Include="LLayer.h">
       <Filter>Engine\Layer</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h">
+    <ClInclude Include="LGameObject.h">
       <Filter>Engine\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="Component.h">
+    <ClInclude Include="LComponent.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
-    <ClInclude Include="Input.h">
+    <ClInclude Include="LInput.h">
       <Filter>Engine\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="LResource.h">
+      <Filter>Engine\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="LResources.h">
+      <Filter>Engine\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="LImage.h">
+      <Filter>Engine\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Main</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -119,32 +127,41 @@
     <ClCompile Include="main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="Entity.cpp">
+    <ClCompile Include="LEntity.cpp">
       <Filter>Engine\Common</Filter>
     </ClCompile>
-    <ClCompile Include="Application.cpp">
+    <ClCompile Include="LApplication.cpp">
       <Filter>Engine\High Level Interface</Filter>
     </ClCompile>
-    <ClCompile Include="Scene.cpp">
+    <ClCompile Include="LScene.cpp">
       <Filter>Engine\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
+    <ClCompile Include="LSceneManager.cpp">
       <Filter>Engine\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Time.cpp">
+    <ClCompile Include="LTime.cpp">
       <Filter>Engine\Time</Filter>
     </ClCompile>
-    <ClCompile Include="Layer.cpp">
+    <ClCompile Include="LLayer.cpp">
       <Filter>Engine\Layer</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
+    <ClCompile Include="LGameObject.cpp">
       <Filter>Engine\GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="Component.cpp">
+    <ClCompile Include="LComponent.cpp">
       <Filter>Engine\Component</Filter>
     </ClCompile>
-    <ClCompile Include="Input.cpp">
+    <ClCompile Include="LInput.cpp">
       <Filter>Engine\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="LResource.cpp">
+      <Filter>Engine\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="LResources.cpp">
+      <Filter>Engine\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="LImage.cpp">
+      <Filter>Engine\Resource</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

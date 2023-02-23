@@ -1,7 +1,7 @@
-#include "Application.h"
-#include "SceneManager.h"
-#include "Time.h"
-#include "Input.h"
+#include "LApplication.h"
+#include "LSceneManager.h"
+#include "LTime.h"
+#include "LInput.h"
 namespace fnf
 {
 	Application::Application()

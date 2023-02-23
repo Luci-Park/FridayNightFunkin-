@@ -1,5 +1,5 @@
-#include "Time.h"
-#include "Application.h"
+#include "LTime.h"
+#include "LApplication.h"
 
 //다른 cpp의 전역변수를 가져오는 변수: extern
 extern fnf::Application application;

@@ -14,6 +14,8 @@ enum class eSceneType
 
 enum class eLayerType
 {
+	Background,
+	BackgroundCharacters,
 	Player,
 	Opponent,
 	Notes,

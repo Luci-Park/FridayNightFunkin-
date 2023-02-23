@@ -1,6 +1,6 @@
 #pragma once
-#include "Entity.h"
-#include "Layer.h"
+#include "LEntity.h"
+#include "LLayer.h"
 namespace fnf
 {
 	class Scene : public Entity

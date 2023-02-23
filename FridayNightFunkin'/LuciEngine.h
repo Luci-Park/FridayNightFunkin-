@@ -1,4 +1,4 @@
 #pragma once
 #include "CommonInclude.h"
-#include "Math.h"
-#include "Enums.h"
+#include "LMath.h"
+#include "LEnums.h"
