@@ -47,6 +47,9 @@
     <Filter Include="Engine\Resource">
       <UniqueIdentifier>{46453165-0c59-429c-8fd0-21279e2c1db3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Contents\Background">
+      <UniqueIdentifier>{a1a9b247-87ef-4b1d-9cd1-bc3f726d5705}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FridayNightFunkin%27.h">
@@ -112,9 +115,6 @@
     <ClInclude Include="LWeek4Scene.h">
       <Filter>Contents\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="LOptions.h">
-      <Filter>Contents\Scene</Filter>
-    </ClInclude>
     <ClInclude Include="LOptionsScene.h">
       <Filter>Contents\Scene</Filter>
     </ClInclude>
@@ -135,6 +135,12 @@
     </ClInclude>
     <ClInclude Include="LWeek3Scene.h">
       <Filter>Contents\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="LWeek2Scene.h">
+      <Filter>Contents\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="LStageBg.h">
+      <Filter>Contents\Background</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -190,9 +196,6 @@
     <ClCompile Include="LImage.cpp">
       <Filter>Engine\Resource</Filter>
     </ClCompile>
-    <ClCompile Include="LOptions.cpp">
-      <Filter>Contents\Scene</Filter>
-    </ClCompile>
     <ClCompile Include="LOptionsScene.cpp">
       <Filter>Contents\Scene</Filter>
     </ClCompile>
@@ -216,6 +219,12 @@
     </ClCompile>
     <ClCompile Include="LWeek4Scene.cpp">
       <Filter>Contents\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="LWeek2Scene.cpp">
+      <Filter>Contents\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="LStageBg.cpp">
+      <Filter>Contents\Background</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

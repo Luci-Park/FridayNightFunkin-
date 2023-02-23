@@ -7,6 +7,7 @@ enum class eSceneType
 	StoryMode,
 	Tutorial,
 	Week1,
+	Week2,
 	Week3,
 	Week4,
 	SIZE

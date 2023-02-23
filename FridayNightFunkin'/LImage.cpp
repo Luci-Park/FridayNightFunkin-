@@ -3,6 +3,7 @@
 extern fnf::Application application;
 namespace fnf
 {
+	const std::wstring Image::defaultPath = L"..\\FNFAssets\\Art\\";
 	Image::Image()
 		:mBitmap(NULL)
 		,mHdc(NULL)
@@ -14,8 +15,9 @@ namespace fnf
 	{
 	}
 	HRESULT Image::Load(const std::wstring& path){
+		const std::wstring finalPath = defaultPath + path;
 		mBitmap = (HBITMAP)LoadImageW(nullptr,
-			path.c_str(), IMAGE_BITMAP,
+			finalPath.c_str(), IMAGE_BITMAP,
 			0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
 		if (mBitmap == nullptr)
 			return E_FAIL;
