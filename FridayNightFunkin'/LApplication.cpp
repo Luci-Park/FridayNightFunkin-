@@ -18,8 +18,8 @@ namespace fnf
 	{
 		mHwnd = hWnd;
 		mHdc = GetDC(hWnd);
-		mWidth = 1600;
-		mHeight = 900;
+		mWidth = 1280;
+		mHeight = 720;
 
 		RECT rect = { 0, 0, mWidth, mHeight };
 		AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, false);

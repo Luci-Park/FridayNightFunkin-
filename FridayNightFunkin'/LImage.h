@@ -15,6 +15,8 @@ namespace fnf
 		UINT GetWidth() { return mWidth; }
 		UINT GetHeight() { return mHeight; }
 
+		static const std::wstring defaultPath;
+
 	private:
 		HBITMAP mBitmap;
 		HDC mHdc;

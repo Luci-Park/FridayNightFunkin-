@@ -2,11 +2,11 @@
 #include"LScene.h"
 namespace fnf
 {
-	class StoryModeScene : public Scene
+	class Week2Scene : public Scene
 	{
 	public:
-		StoryModeScene();
-		~StoryModeScene();
+		Week2Scene();
+		~Week2Scene();
 
 		virtual void Initialize() override;
 		virtual void Update() override;
