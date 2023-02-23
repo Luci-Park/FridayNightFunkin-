@@ -12,6 +12,7 @@ namespace fnf
 		void Run();
 		void Update();
 		void Render();
+		void Release();
 
 		HWND GetHWnd() { return mHwnd; }
 

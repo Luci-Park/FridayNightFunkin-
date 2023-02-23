@@ -66,6 +66,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         }
     }
 
+    application.Release();
     return (int) msg.wParam;
 }
 
