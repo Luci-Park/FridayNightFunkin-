@@ -12,7 +12,6 @@ namespace fnf
 
 	Application::~Application()
 	{
-		SceneManager::Release();
 	}
 
 	void Application::Initialize(HWND hWnd)
@@ -64,5 +63,9 @@ namespace fnf
 		Input::Render(mHdc);
 		SceneManager::Render(mHdc);
 		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHDC, 0, 0, SRCCOPY);
+	}
+	void Application::Release()
+	{
+		SceneManager::Release();
 	}
 }
