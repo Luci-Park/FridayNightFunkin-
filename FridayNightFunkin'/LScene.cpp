@@ -1,4 +1,4 @@
-#include "Scene.h"
+#include "LScene.h"
 namespace fnf
 {
 	Scene::Scene()

@@ -1,6 +1,6 @@
 #pragma once
-#include "Entity.h"
-#include "GameObject.h"
+#include "LEntity.h"
+#include "LGameObject.h"
 
 namespace fnf
 {

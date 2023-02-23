@@ -1,5 +1,5 @@
 #pragma once
-#include "Engine.h"
+#include "LuciEngine.h"
 namespace fnf
 {
 	class Application
@@ -15,6 +15,7 @@ namespace fnf
 		void Release();
 
 		HWND GetHWnd() { return mHwnd; }
+		HDC GetHdc() { return mHdc; }
 
 	private:
 		HWND mHwnd;

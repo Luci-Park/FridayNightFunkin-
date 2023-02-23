@@ -1,4 +1,4 @@
-#include "Entity.h"
+#include "LEntity.h"
 namespace fnf
 {
 	Entity::Entity()

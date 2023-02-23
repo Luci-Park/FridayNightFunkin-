@@ -1,5 +1,5 @@
 #pragma once
-#include "Entity.h"
+#include "LEntity.h"
 namespace fnf
 {
 	class Component : public Entity
