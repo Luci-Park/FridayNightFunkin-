@@ -26,10 +26,10 @@ namespace fnf
     }
     void OptionsScene::OnEnter()
     {
-        Scene::Release();
+        Scene::OnEnter();
     }
     void OptionsScene::OnExit()
     {
-        Scene::Release();
+        Scene::OnExit();
     }
 }

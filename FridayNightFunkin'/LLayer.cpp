@@ -13,7 +13,6 @@ namespace fnf
 		{
 			if (gameObj == nullptr)
 				continue;
-
 			gameObj->Initialize();
 		}
 	}
@@ -23,7 +22,6 @@ namespace fnf
 		{
 			if (gameObj == nullptr)
 				continue;
-
 			gameObj->Update();
 		}
 	}
@@ -33,7 +31,6 @@ namespace fnf
 		{
 			if (gameObj == nullptr)
 				continue;
-
 			gameObj->Render(hdc);
 		}
 	}

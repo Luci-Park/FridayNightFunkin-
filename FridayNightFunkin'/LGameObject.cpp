@@ -1,11 +1,10 @@
 #include "LGameObject.h"
-#include "LTransform.h"
 namespace fnf
 {
 	GameObject::GameObject()
 	{
 		mComponents.resize((UINT)eComponentType::SIZE);
-		AddComponent<Transform>();
+		transform = AddComponent<Transform>();
 	}
 	GameObject::~GameObject()
 	{

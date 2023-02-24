@@ -3,12 +3,12 @@
 #include "LImage.h"
 namespace fnf
 {
-	class LStageBg : public GameObject
+	class StageBg : public GameObject
 	{
 	public:
 
-		LStageBg();
-		~LStageBg();
+		StageBg();
+		~StageBg();
 
 		virtual void Initialize()override;
 		virtual void Update()override;
@@ -16,6 +16,7 @@ namespace fnf
 		virtual void Release()override;
 	private:
 		Image* mImage;
+		Vector2 imagePivot;
 	};
 }
 

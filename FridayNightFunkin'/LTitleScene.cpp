@@ -1,4 +1,5 @@
 #include "LTitleScene.h"
+#include "LColorBlock.h"
 namespace fnf
 {
 	TitleScene::TitleScene()
@@ -10,6 +11,7 @@ namespace fnf
 	}
     void TitleScene::Initialize()
     {
+        AddGameObject(new ColorBlock(RGB(0, 0, 0)), eLayerType::Background);
         Scene::Initialize();
     }
     void TitleScene::Update()
@@ -26,10 +28,10 @@ namespace fnf
     }
     void TitleScene::OnEnter()
     {
-        Scene::Release();
+        Scene::OnEnter();
     }
     void TitleScene::OnExit()
     {
-        Scene::Release();
+        Scene::OnExit();
     }
 }

@@ -14,7 +14,7 @@ namespace fnf
 				continue;
 			scene->Initialize();
 		}
-		mActiveScene = mScenes[(UINT)eSceneType::Splash];
+		LoadScene(eSceneType::Splash);
 	}
 
 	void SceneManager::Update()
