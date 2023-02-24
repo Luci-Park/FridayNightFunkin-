@@ -6,7 +6,7 @@ namespace fnf
 	class Scene : public Entity
 	{
 	public:
-		Scene();
+		Scene(std::wstring sceneName, eSceneType type);
 		virtual ~Scene();
 
 		virtual void Initialize();
@@ -18,8 +18,11 @@ namespace fnf
 		virtual void OnExit();
 
 		void AddGameObject(GameObject* obj, eLayerType layer);
+		std::wstring GetSceneName() { return mSceneName; }
 
-	private:
+	protected:
+		eSceneType mSceneType;
+		std::wstring mSceneName;
 		std::vector<Layer> mLayers;
 	};
 }

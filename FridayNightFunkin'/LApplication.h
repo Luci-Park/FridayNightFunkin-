@@ -16,6 +16,8 @@ namespace fnf
 
 		HWND GetHWnd() { return mHwnd; }
 		HDC GetHdc() { return mHdc; }
+		UINT GetScreenWidth() { return mWidth; }
+		UINT GetScreenHeight() { return mHeight; }
 
 	private:
 		HWND mHwnd;

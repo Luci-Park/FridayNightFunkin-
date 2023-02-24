@@ -45,6 +45,8 @@ namespace fnf
 				continue;
 
 			gameObj->Release();
+			delete gameObj;
+			gameObj = nullptr;
 		}
 	}
 	void Layer::AddGameObject(GameObject* gameObj)

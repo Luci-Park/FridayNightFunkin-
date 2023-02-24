@@ -24,3 +24,14 @@ enum class eLayerType
 	UI,
 	SIZE
 };
+
+
+enum class eComponentType
+{
+	Transform,
+	Collider,
+	SpriteRenderer,
+	Animator,
+	Audio,
+	SIZE
+};

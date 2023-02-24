@@ -1,7 +1,10 @@
 #include "LScene.h"
+#include "LInput.h"
+#include "LSceneManager.h"
 namespace fnf
 {
-	Scene::Scene()
+	Scene::Scene(std::wstring sceneName, eSceneType type)
+		:mSceneName(sceneName), mSceneType(type)
 	{
 		mLayers.reserve(5);
 		mLayers.resize((UINT)eLayerType::SIZE);
@@ -18,6 +21,10 @@ namespace fnf
 	}
 	void Scene::Update()
 	{
+		if (Input::GetKeyState(eKeyCode::N) == eKeyState::Down)
+		{
+			SceneManager::GetNextScene(mSceneType);
+		}
 		for (Layer& layer : mLayers)
 		{
 			layer.Update();
