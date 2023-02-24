@@ -16,7 +16,7 @@ namespace fnf
 	}
 	HRESULT Image::Load(const std::wstring& path){
 		std::wstring finalPath = defaultPath + path;
-		//std::wstring finalPath = L"C:\\Users\\user\\Documents\\_Quve17\\Luci\\Coding\\AssortRock\\FridayNightFunkin'\\FNFAssets\\Art\\Backgrounds\\Week1\\stage.bmp";
+		//std::wstring finalPath = L"C:\\Users\\user\\Documents\\_Quve17\\Luci\\Coding\\AssortRock\\AssortRockCpp\\WinAPI\\Resources\\Idle.bmp";
 		mBitmap = (HBITMAP)LoadImageW(nullptr
 			, finalPath.c_str(), IMAGE_BITMAP
 			, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);

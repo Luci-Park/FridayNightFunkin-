@@ -1,4 +1,5 @@
 #include "LWeek1Scene.h"
+#include "LStageBg.h"
 namespace fnf
 {
 	Week1Scene::Week1Scene()
@@ -10,6 +11,7 @@ namespace fnf
 	}
     void Week1Scene::Initialize()
     {
+        AddGameObject(new StageBg(), eLayerType::Background);
         Scene::Initialize();
     }
     void Week1Scene::Update()
