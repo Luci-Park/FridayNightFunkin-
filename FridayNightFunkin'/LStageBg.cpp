@@ -5,8 +5,8 @@
 extern fnf::Application application;
 namespace fnf
 {
-
 	StageBg::StageBg()
+		:mImage(NULL)
 	{
 	}
 	StageBg::~StageBg()

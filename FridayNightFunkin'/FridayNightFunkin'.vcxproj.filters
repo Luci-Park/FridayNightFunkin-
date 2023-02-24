@@ -38,9 +38,6 @@
     <Filter Include="Contents">
       <UniqueIdentifier>{6ed4d9b1-a6a6-4ff8-8f3e-847e7d15f73c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Contents\Player">
-      <UniqueIdentifier>{93686333-b91b-4d73-acd0-fc350f37c06b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Contents\Scene">
       <UniqueIdentifier>{93691678-c80c-489c-959f-049748637b23}</UniqueIdentifier>
     </Filter>
@@ -49,6 +46,15 @@
     </Filter>
     <Filter Include="Contents\Background">
       <UniqueIdentifier>{a1a9b247-87ef-4b1d-9cd1-bc3f726d5705}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\Singers">
+      <UniqueIdentifier>{d8603954-e5f7-437d-95db-81fa91991d6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\Singers\Opponents">
+      <UniqueIdentifier>{8b1fff38-bdc1-4a6d-bf01-8dc44f49c86c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\Singers\Player">
+      <UniqueIdentifier>{93686333-b91b-4d73-acd0-fc350f37c06b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -151,7 +157,7 @@
     <ClInclude Include="LColorBlock.h">
       <Filter>Contents\Background</Filter>
     </ClInclude>
-    <ClInclude Include="LCityNightBg.h">
+    <ClInclude Include="LNightCityBg.h">
       <Filter>Contents\Background</Filter>
     </ClInclude>
     <ClInclude Include="LHauntedBg.h">
@@ -160,6 +166,10 @@
     <ClInclude Include="LLimousineBg.h">
       <Filter>Contents\Background</Filter>
     </ClInclude>
+    <ClInclude Include="LPlayerOne.h">
+      <Filter>Contents\Singers\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="LSingers.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FridayNightFunkin%27.rc">
@@ -250,7 +260,7 @@
     <ClCompile Include="LColorBlock.cpp">
       <Filter>Contents\Background</Filter>
     </ClCompile>
-    <ClCompile Include="LCityNightBg.cpp">
+    <ClCompile Include="LNightCityBg.cpp">
       <Filter>Contents\Background</Filter>
     </ClCompile>
     <ClCompile Include="LHauntedBg.cpp">
@@ -259,5 +269,9 @@
     <ClCompile Include="LLimousineBg.cpp">
       <Filter>Contents\Background</Filter>
     </ClCompile>
+    <ClCompile Include="LPlayerOne.cpp">
+      <Filter>Contents\Singers\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="LSingers.cpp" />
   </ItemGroup>
 </Project>
