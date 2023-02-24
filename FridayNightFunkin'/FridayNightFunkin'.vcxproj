@@ -128,7 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="LCityNightBg.h" />
+    <ClInclude Include="LNightCityBg.h" />
     <ClInclude Include="LColorBlock.h" />
     <ClInclude Include="LApplication.h" />
     <ClInclude Include="CommonInclude.h" />
@@ -136,6 +136,8 @@
     <ClInclude Include="LHauntedBg.h" />
     <ClInclude Include="LLimousineBg.h" />
     <ClInclude Include="LOptionsScene.h" />
+    <ClInclude Include="LPlayerOne.h" />
+    <ClInclude Include="LSingers.h" />
     <ClInclude Include="LSplashScene.h" />
     <ClInclude Include="LStageBg.h" />
     <ClInclude Include="LStoryModeScene.h" />
@@ -166,7 +168,7 @@
     <ClInclude Include="LTime.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LCityNightBg.cpp" />
+    <ClCompile Include="LNightCityBg.cpp" />
     <ClCompile Include="LColorBlock.cpp" />
     <ClCompile Include="LComponent.cpp" />
     <ClCompile Include="LEntity.cpp" />
@@ -174,6 +176,8 @@
     <ClCompile Include="LImage.cpp" />
     <ClCompile Include="LLimousineBg.cpp" />
     <ClCompile Include="LOptionsScene.cpp" />
+    <ClCompile Include="LPlayerOne.cpp" />
+    <ClCompile Include="LSingers.cpp" />
     <ClCompile Include="LSplashScene.cpp" />
     <ClCompile Include="LStageBg.cpp" />
     <ClCompile Include="LStoryModeScene.cpp" />

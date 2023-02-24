@@ -3,12 +3,12 @@
 #include "LImage.h"
 namespace fnf
 {
-	class LimusineBg : public GameObject
+	class NightCityBg : public GameObject
 	{
 	public:
 
-		LimusineBg();
-		~LimusineBg();
+		NightCityBg();
+		~NightCityBg();
 
 		virtual void Initialize()override;
 		virtual void Update()override;
