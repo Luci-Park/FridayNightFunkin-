@@ -1,13 +1,14 @@
 #include "LGameObject.h"
+#include "LTransform.h"
 namespace fnf
 {
 	GameObject::GameObject()
 	{
-
+		mComponents.resize((UINT)eComponentType::SIZE);
+		AddComponent<Transform>();
 	}
 	GameObject::~GameObject()
 	{
-
 	}
 
 	void GameObject::Initialize()
@@ -48,6 +49,8 @@ namespace fnf
 				continue;
 
 			comp->Release();
+			delete comp;
+			comp = nullptr;
 		}
 	}
 }

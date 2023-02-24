@@ -136,6 +136,7 @@
     <ClInclude Include="LStageBg.h" />
     <ClInclude Include="LStoryModeScene.h" />
     <ClInclude Include="LTitleScene.h" />
+    <ClInclude Include="LTransform.h" />
     <ClInclude Include="LTutorialScene.h" />
     <ClInclude Include="LuciEngine.h" />
     <ClInclude Include="LEntity.h" />
@@ -155,6 +156,7 @@
     <ClInclude Include="LResources.h" />
     <ClInclude Include="LScene.h" />
     <ClInclude Include="LSceneManager.h" />
+    <ClInclude Include="LSceneHeaders.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="LMath.h" />
     <ClInclude Include="LTime.h" />
@@ -168,6 +170,7 @@
     <ClCompile Include="LStageBg.cpp" />
     <ClCompile Include="LStoryModeScene.cpp" />
     <ClCompile Include="LTitleScene.cpp" />
+    <ClCompile Include="LTransform.cpp" />
     <ClCompile Include="LTutorialScene.cpp" />
     <ClCompile Include="LWeek1Scene.cpp" />
     <ClCompile Include="LWeek2Scene.cpp" />
