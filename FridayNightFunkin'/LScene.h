@@ -18,11 +18,9 @@ namespace fnf
 		virtual void OnExit();
 
 		void AddGameObject(GameObject* obj, eLayerType layer);
-		std::wstring GetSceneName() { return mSceneName; }
 
 	protected:
 		eSceneType mSceneType;
-		std::wstring mSceneName;
 		std::vector<Layer> mLayers;
 	};
 }

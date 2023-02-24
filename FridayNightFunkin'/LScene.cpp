@@ -4,8 +4,9 @@
 namespace fnf
 {
 	Scene::Scene(std::wstring sceneName, eSceneType type)
-		:mSceneName(sceneName), mSceneType(type)
+		:mSceneType(type)
 	{
+		SetName(sceneName);
 		mLayers.reserve(5);
 		mLayers.resize((UINT)eLayerType::SIZE);
 	}
@@ -21,13 +22,13 @@ namespace fnf
 	}
 	void Scene::Update()
 	{
-		if (Input::GetKeyState(eKeyCode::N) == eKeyState::Down)
-		{
-			SceneManager::GetNextScene(mSceneType);
-		}
 		for (Layer& layer : mLayers)
 		{
 			layer.Update();
+		}
+		if (Input::GetKeyState(eKeyCode::ENTER) == eKeyState::Down)
+		{
+			SceneManager::GetNextScene(mSceneType);
 		}
 	}
 	void Scene::Render(HDC hdc)
@@ -51,7 +52,7 @@ namespace fnf
 	{
 	}
 	void Scene::AddGameObject(GameObject* obj, eLayerType layer)
-	{
+	{		
 		mLayers[(UINT)layer].AddGameObject(obj);
 	}
 }

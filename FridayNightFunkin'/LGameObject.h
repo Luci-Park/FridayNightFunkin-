@@ -1,6 +1,7 @@
 #pragma once
 #include "LEntity.h"
 #include "LComponent.h"
+#include "LTransform.h"
 namespace fnf
 {
 	class GameObject : public Entity
@@ -33,9 +34,8 @@ namespace fnf
 			}
 			return nullptr;
 		}
-
 	protected:
-		Vector2 mPos;
+		Transform* transform;
 
 	private:
 		std::vector<Component*> mComponents;

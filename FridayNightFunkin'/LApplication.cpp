@@ -54,7 +54,7 @@ namespace fnf
 		Time::Update();
 		Input::Update();
 		SceneManager::Update();
-		std::wstring title = SceneManager::GetActiveScene()->GetSceneName();
+		std::wstring title = SceneManager::GetActiveScene()->GetName();
 		std::wstring fps = std::to_wstring((UINT)Time::FPS());
 		title += L" - FPS : " + fps;
 		SetWindowText(mHwnd, title.c_str());

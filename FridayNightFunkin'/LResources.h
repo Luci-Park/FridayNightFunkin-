@@ -2,13 +2,17 @@
 #include "LResource.h"
 namespace fnf
 {
+	enum eResourceKeys
+	{
+		StageBackground, SIZE
+	};
 	class Resources
 	{
 	public:
 		template<typename T>
-		static T* Find(const std::wstring& key)
+		static T* Find(eResourceKeys key)
 		{
-			std::map<std::wstring, Resource*>::iterator iter = mResources.find(key);
+			auto iter = mResources.find(key);
 			if (iter != mResources.end())
 			{
 				return dynamic_cast<T*>(iter->second);
@@ -17,7 +21,7 @@ namespace fnf
 		}
 
 		template<typename T>
-		static T* Load(const std::wstring& key, const std::wstring& path)
+		static T* Load(eResourceKeys key)
 		{
 			T* resource = Resources::Find<T>(key);
 			if (resource != nullptr)
@@ -25,19 +29,20 @@ namespace fnf
 				return resource;
 			}
 			resource = new T();
+			std::wstring path = mResourcePaths[(UINT)key];
 			if (FAILED(resource->Load(path)))
 			{
 				assert(false);//에러 검출용 코드, 0일때 에러남.
 				return nullptr;
 			}
-			resource->SetKey(key);
-			resource->SetPath(path);
 			mResources.insert(std::make_pair(key, resource));
 
 			return dynamic_cast<T*>(resource);
 		}
+		
 	private:
-		static std::map<std::wstring, Resource*>mResources;
+		static std::map<eResourceKeys, Resource*>mResources;
+		const static std::vector<std::wstring> mResourcePaths;
 	};
 }
 

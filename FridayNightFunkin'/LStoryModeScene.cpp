@@ -26,10 +26,10 @@ namespace fnf
     }
     void StoryModeScene::OnEnter()
     {
-        Scene::Release();
+        Scene::OnEnter();
     }
     void StoryModeScene::OnExit()
     {
-        Scene::Release();
+        Scene::OnExit();
     }
 }

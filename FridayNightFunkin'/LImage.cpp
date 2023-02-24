@@ -15,10 +15,11 @@ namespace fnf
 	{
 	}
 	HRESULT Image::Load(const std::wstring& path){
-		const std::wstring finalPath = defaultPath + path;
-		mBitmap = (HBITMAP)LoadImageW(nullptr,
-			finalPath.c_str(), IMAGE_BITMAP,
-			0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
+		std::wstring finalPath = defaultPath + path;
+		//std::wstring finalPath = L"C:\\Users\\user\\Documents\\_Quve17\\Luci\\Coding\\AssortRock\\FridayNightFunkin'\\FNFAssets\\Art\\Backgrounds\\Week1\\stage.bmp";
+		mBitmap = (HBITMAP)LoadImageW(nullptr
+			, finalPath.c_str(), IMAGE_BITMAP
+			, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
 		if (mBitmap == nullptr)
 			return E_FAIL;
 		BITMAP bitInfo = {};

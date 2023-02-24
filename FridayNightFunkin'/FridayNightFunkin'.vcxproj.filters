@@ -148,6 +148,9 @@
     <ClInclude Include="LTransform.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
+    <ClInclude Include="LColorBlock.h">
+      <Filter>Contents\Background</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FridayNightFunkin%27.rc">
@@ -234,6 +237,9 @@
     </ClCompile>
     <ClCompile Include="LTransform.cpp">
       <Filter>Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="LColorBlock.cpp">
+      <Filter>Contents\Background</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

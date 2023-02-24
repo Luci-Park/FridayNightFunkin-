@@ -1,4 +1,5 @@
 #include "LTutorialScene.h"
+#include "LStageBg.h"
 namespace fnf
 {
 	fnf::TutorialScene::TutorialScene()
@@ -10,6 +11,7 @@ namespace fnf
 	}
     void TutorialScene::Initialize()
     {
+        AddGameObject(new StageBg(), eLayerType::Background);
         Scene::Initialize();
     }
     void TutorialScene::Update()
@@ -26,10 +28,10 @@ namespace fnf
     }
     void TutorialScene::OnEnter()
     {
-        Scene::Release();
+        Scene::OnEnter();
     }
     void TutorialScene::OnExit()
     {
-        Scene::Release();
+        Scene::OnExit();
     }
 }

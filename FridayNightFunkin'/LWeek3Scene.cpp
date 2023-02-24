@@ -27,10 +27,10 @@ namespace fnf
     }
     void Week3Scene::OnEnter()
     {
-        Scene::Release();
+        Scene::OnEnter();
     }
     void Week3Scene::OnExit()
     {
-        Scene::Release();
+        Scene::OnExit();
     }
 }
