@@ -4,7 +4,8 @@ namespace fnf
 {
 	enum eResourceKeys
 	{
-		StageBackground, SIZE
+		StageBackground, HauntedBackground, NightCityBackground, LimousineBackground,
+		SIZE
 	};
 	class Resources
 	{
@@ -42,7 +43,7 @@ namespace fnf
 		
 	private:
 		static std::map<eResourceKeys, Resource*>mResources;
-		const static std::vector<std::wstring> mResourcePaths;
+		const static std::wstring mResourcePaths[];
 	};
 }
 

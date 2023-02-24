@@ -28,8 +28,8 @@ namespace fnf
 	{
 		GameObject::Render(hdc);
 		Vector2 pos = transform->GetPos();
-		pos += imagePivot;
-		BitBlt(hdc, pos.x, pos.y, mImage->GetWidth(), mImage->GetHeight(), mImage->GetHdc()
+		pos = imagePivot;
+		BitBlt(hdc, 0, 0, mImage->GetWidth(), mImage->GetHeight(), mImage->GetHdc()
 			, 0, 0, SRCCOPY);
 	}
 	void StageBg::Release()

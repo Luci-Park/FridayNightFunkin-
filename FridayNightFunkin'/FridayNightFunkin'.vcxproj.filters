@@ -151,6 +151,15 @@
     <ClInclude Include="LColorBlock.h">
       <Filter>Contents\Background</Filter>
     </ClInclude>
+    <ClInclude Include="LCityNightBg.h">
+      <Filter>Contents\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="LHauntedBg.h">
+      <Filter>Contents\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="LLimousineBg.h">
+      <Filter>Contents\Background</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FridayNightFunkin%27.rc">
@@ -239,6 +248,15 @@
       <Filter>Engine\Component</Filter>
     </ClCompile>
     <ClCompile Include="LColorBlock.cpp">
+      <Filter>Contents\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="LCityNightBg.cpp">
+      <Filter>Contents\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="LHauntedBg.cpp">
+      <Filter>Contents\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="LLimousineBg.cpp">
       <Filter>Contents\Background</Filter>
     </ClCompile>
   </ItemGroup>
