@@ -1,6 +1,6 @@
 #pragma once
 #include "LuciEngine.h"
-namespace fnf
+namespace ci
 {
 	class Entity
 	{

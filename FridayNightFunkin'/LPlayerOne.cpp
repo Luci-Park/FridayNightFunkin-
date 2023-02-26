@@ -1,5 +1,5 @@
 #include "LPlayerOne.h"
-namespace fnf
+namespace ci
 {
 	PlayerOne::PlayerOne()
 		:mImage(NULL)

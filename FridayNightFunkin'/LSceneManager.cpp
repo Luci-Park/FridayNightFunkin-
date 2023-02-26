@@ -1,6 +1,6 @@
 #include "LSceneManager.h"
 #include "LSceneHeaders.h"
-namespace fnf
+namespace ci
 {
 	std::vector<Scene*> SceneManager::mScenes = {};
 	Scene* SceneManager::mActiveScene = nullptr;

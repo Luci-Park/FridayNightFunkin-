@@ -1,6 +1,6 @@
 #pragma once
 #include "LGameObject.h"
-namespace fnf
+namespace ci
 {
 	class Singer : public GameObject
 	{

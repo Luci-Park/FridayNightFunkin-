@@ -2,7 +2,7 @@
 #include "LEntity.h"
 #include "LGameObject.h"
 
-namespace fnf
+namespace ci
 {
 	class Layer : public Entity
 	{

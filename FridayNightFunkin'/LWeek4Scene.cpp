@@ -1,5 +1,5 @@
 #include "LWeek4Scene.h"
-namespace fnf
+namespace ci
 {
 
 	Week4Scene::Week4Scene()

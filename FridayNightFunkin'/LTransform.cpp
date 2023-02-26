@@ -1,5 +1,5 @@
 #include "LTransform.h"
-namespace fnf
+namespace ci
 {
 	Transform::Transform()
 		:Component(eComponentType::Transform)

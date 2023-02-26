@@ -1,7 +1,7 @@
 
 #include "LGameObject.h"
 #include "LImage.h"
-namespace fnf
+namespace ci
 {
 	class ColorBlock : public GameObject
 	{

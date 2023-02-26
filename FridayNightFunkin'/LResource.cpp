@@ -1,5 +1,5 @@
 #include "LResource.h"
-namespace fnf
+namespace ci
 {
 	Resource::Resource()
 	{

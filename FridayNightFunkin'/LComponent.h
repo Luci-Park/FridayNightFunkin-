@@ -1,6 +1,6 @@
 #pragma once
 #include "LEntity.h"
-namespace fnf
+namespace ci
 {
 	class Component : public Entity
 	{

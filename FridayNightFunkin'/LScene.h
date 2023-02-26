@@ -1,7 +1,7 @@
 #pragma once
 #include "LEntity.h"
 #include "LLayer.h"
-namespace fnf
+namespace ci
 {
 	class Scene : public Entity
 	{
