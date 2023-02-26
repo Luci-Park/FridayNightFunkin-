@@ -1,5 +1,5 @@
 #include "LLayer.h"
-namespace ci
+namespace fnf
 {
 	Layer::Layer()
 	{

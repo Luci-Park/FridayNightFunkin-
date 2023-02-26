@@ -1,6 +1,6 @@
 #include "LSplashScene.h"
 #include "LColorBlock.h"
-namespace ci
+namespace fnf
 {
     SplashScene::SplashScene()
         :Scene(L"Splash", eSceneType::Splash)

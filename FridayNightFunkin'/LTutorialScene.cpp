@@ -1,8 +1,8 @@
 #include "LTutorialScene.h"
 #include "LStageBg.h"
-namespace ci
+namespace fnf
 {
-	ci::TutorialScene::TutorialScene()
+	fnf::TutorialScene::TutorialScene()
 		:Scene(L"Tutorial", eSceneType::Tutorial)
 	{
 	}

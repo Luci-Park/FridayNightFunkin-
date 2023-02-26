@@ -1,5 +1,5 @@
 #include "LGameObject.h"
-namespace ci
+namespace fnf
 {
 	GameObject::GameObject()
 	{

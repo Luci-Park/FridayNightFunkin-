@@ -1,7 +1,7 @@
 #pragma once
 #include "LGameObject.h"
 #include "LImage.h"
-namespace ci
+namespace fnf
 {
 	class NightCityBg : public GameObject
 	{

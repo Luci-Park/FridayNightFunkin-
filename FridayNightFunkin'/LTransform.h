@@ -1,6 +1,6 @@
 #pragma once
 #include "LComponent.h"
-namespace ci
+namespace fnf
 {
 	class Transform : public Component
 	{

@@ -1,5 +1,5 @@
 #include "LComponent.h"
-namespace ci
+namespace fnf
 {
     Component::Component(eComponentType type)
         :mType(type)

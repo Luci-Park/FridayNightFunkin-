@@ -1,6 +1,6 @@
 #pragma once
 #include "LuciEngine.h"
-namespace ci
+namespace fnf
 {
 	class Application
 	{

@@ -1,5 +1,5 @@
 #include "LSingers.h"
-namespace ci
+namespace fnf
 {
 	Singer::Singer()
 	{

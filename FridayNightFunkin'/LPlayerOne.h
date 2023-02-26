@@ -1,7 +1,7 @@
 #pragma once
 #include "LSingers.h"
 #include "LImage.h"
-namespace ci
+namespace fnf
 {
 	class PlayerOne : public Singer
 	{

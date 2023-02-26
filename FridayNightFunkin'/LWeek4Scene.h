@@ -1,6 +1,6 @@
 #pragma once
 #include"LScene.h"
-namespace ci
+namespace fnf
 {
 	class Week4Scene : public Scene
 	{

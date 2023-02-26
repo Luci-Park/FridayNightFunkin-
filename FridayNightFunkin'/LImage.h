@@ -1,6 +1,6 @@
 #pragma once
 #include "LResource.h"
-namespace ci
+namespace fnf
 {
 	class Image : public Resource
 	{
@@ -9,6 +9,7 @@ namespace ci
 		~Image();
 
 		virtual HRESULT Load(const std::wstring& path) override;
+
 		HDC GetHdc() { return mHdc; }
 		HBITMAP GetBitmap() { return mBitmap; }
 		UINT GetWidth() { return mWidth; }
