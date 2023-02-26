@@ -1,7 +1,7 @@
 #include "LColorBlock.h"
 #include "LApplication.h"
-extern fnf::Application application;
-namespace fnf
+extern ci::Application application;
+namespace ci
 {
 	ColorBlock::ColorBlock(COLORREF color)
 	{

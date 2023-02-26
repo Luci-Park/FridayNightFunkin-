@@ -1,5 +1,5 @@
 #include "LStoryModeScene.h"
-namespace fnf
+namespace ci
 {
 	StoryModeScene::StoryModeScene()
 		:Scene(L"StoryMode", eSceneType::StoryMode)

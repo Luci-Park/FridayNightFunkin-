@@ -1,6 +1,6 @@
 #include "LNightCityBg.h"
 #include "LResources.h"
-namespace fnf
+namespace ci
 {
 	NightCityBg::NightCityBg()
 		:mImage(NULL)

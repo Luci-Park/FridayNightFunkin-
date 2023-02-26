@@ -1,6 +1,6 @@
 #pragma once
 #include "LResource.h"
-namespace fnf
+namespace ci
 {
 	enum eResourceKeys
 	{

@@ -1,6 +1,6 @@
 #include "LWeek1Scene.h"
 #include "LStageBg.h"
-namespace fnf
+namespace ci
 {
 	Week1Scene::Week1Scene()
 		:Scene(L"Week1", eSceneType::Week1)

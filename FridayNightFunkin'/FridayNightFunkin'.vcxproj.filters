@@ -58,7 +58,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FridayNightFunkin%27.h">
+    <ClInclude Include="Client.h">
       <Filter>Main</Filter>
     </ClInclude>
     <ClInclude Include="CommonInclude.h">

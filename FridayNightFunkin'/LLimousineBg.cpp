@@ -1,6 +1,6 @@
 #include "LLimousineBg.h"
 #include "LResources.h"
-namespace fnf
+namespace ci
 {
 	LimusineBg::LimusineBg()
 		:mImage(NULL)

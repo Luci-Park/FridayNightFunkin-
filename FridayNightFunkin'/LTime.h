@@ -1,6 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
-namespace fnf
+namespace ci
 {
 	class Time
 	{

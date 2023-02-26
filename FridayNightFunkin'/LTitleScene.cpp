@@ -1,6 +1,6 @@
 #include "LTitleScene.h"
 #include "LColorBlock.h"
-namespace fnf
+namespace ci
 {
 	TitleScene::TitleScene()
 		:Scene(L"Title", eSceneType::Title)

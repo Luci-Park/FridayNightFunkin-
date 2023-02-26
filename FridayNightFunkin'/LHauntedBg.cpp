@@ -1,6 +1,6 @@
 #include "LHauntedBg.h"
 #include "LResources.h"
-namespace fnf
+namespace ci
 {
 	HauntedBg::HauntedBg()
 		:mImage(NULL)
