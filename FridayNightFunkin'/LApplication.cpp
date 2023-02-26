@@ -2,7 +2,7 @@
 #include "LSceneManager.h"
 #include "LTime.h"
 #include "LInput.h"
-namespace ci
+namespace fnf
 {
 	Application::Application()
 		: mHwnd(NULL)

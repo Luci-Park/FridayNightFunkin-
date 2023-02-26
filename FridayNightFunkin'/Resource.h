@@ -5,13 +5,13 @@
 #define IDS_APP_TITLE			103
 
 #define IDR_MAINFRAME			128
-#define IDD_Client_DIALOG	102
+#define IDD_FRIDAYNIGHTFUNKIN_DIALOG	102
 #define IDD_ABOUTBOX			103
 #define IDM_ABOUT				104
 #define IDM_EXIT				105
-#define IDI_Client			107
+#define IDI_FRIDAYNIGHTFUNKIN			107
 #define IDI_SMALL				108
-#define IDC_Client			109
+#define IDC_FRIDAYNIGHTFUNKIN			109
 #define IDC_MYICON				2
 #ifndef IDC_STATIC
 #define IDC_STATIC				-1

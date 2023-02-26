@@ -3,7 +3,7 @@
 
 //다른 cpp의 전역변수를 가져오는 변수: extern
 //extern fnf::Application application;
-namespace ci
+namespace fnf
 {
 	double Time::mDeltaTime = 0.01f;
 	double Time::mSecond = 0.0f;

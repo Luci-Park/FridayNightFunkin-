@@ -1,5 +1,5 @@
 #include "LEntity.h"
-namespace ci
+namespace fnf
 {
 	Entity::Entity()
 	{

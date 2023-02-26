@@ -1,7 +1,7 @@
 #include "LScene.h"
 #include "LInput.h"
 #include "LSceneManager.h"
-namespace ci
+namespace fnf
 {
 	Scene::Scene(std::wstring sceneName, eSceneType type)
 		:mSceneType(type)

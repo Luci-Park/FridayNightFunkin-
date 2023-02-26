@@ -1,10 +1,9 @@
 #include "LImage.h"
 #include "LApplication.h"
-#include <wincodec.h>
-extern ci::Application application;
-namespace ci
+extern fnf::Application application;
+namespace fnf
 {
-	const std::wstring Image::defaultPath = L"..\\Assets\\Arts\\";
+	const std::wstring Image::defaultPath = L"..\\FNFAssets\\Art\\";
 	Image::Image()
 		:mBitmap(NULL)
 		,mHdc(NULL)
@@ -21,8 +20,7 @@ namespace ci
 		mBitmap = (HBITMAP)LoadImageW(nullptr
 			, finalPath.c_str(), IMAGE_BITMAP
 			, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		
-        if (mBitmap == nullptr)
+		if (mBitmap == nullptr)
 			return E_FAIL;
 		BITMAP bitInfo = {};
 		GetObject(mBitmap, sizeof(BITMAP), &bitInfo);

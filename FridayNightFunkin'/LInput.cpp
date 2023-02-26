@@ -1,6 +1,6 @@
 #include "LInput.h"
 
-namespace ci
+namespace fnf
 {
 	int ASCII[(UINT)eKeyCode::SIZE] =
 	{ 

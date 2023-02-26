@@ -24,7 +24,6 @@
     <ProjectGuid>{68fd95e2-9512-4467-95eb-ee2ce6d6a265}</ProjectGuid>
     <RootNamespace>FridayNightFunkin</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Client</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -149,7 +148,7 @@
     <ClInclude Include="LEntity.h" />
     <ClInclude Include="LEnums.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="Client.h" />
+    <ClInclude Include="FridayNightFunkin%27.h" />
     <ClInclude Include="LGameObject.h" />
     <ClInclude Include="LImage.h" />
     <ClInclude Include="LInput.h" />

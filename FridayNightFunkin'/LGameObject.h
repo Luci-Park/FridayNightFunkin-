@@ -2,7 +2,7 @@
 #include "LEntity.h"
 #include "LComponent.h"
 #include "LTransform.h"
-namespace ci
+namespace fnf
 {
 	class GameObject : public Entity
 	{

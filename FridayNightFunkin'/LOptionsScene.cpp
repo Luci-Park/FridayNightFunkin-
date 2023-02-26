@@ -1,5 +1,5 @@
 #include "LOptionsScene.h"
-namespace ci
+namespace fnf
 {
     OptionsScene::OptionsScene()
         :Scene(L"Options", eSceneType::Options)
