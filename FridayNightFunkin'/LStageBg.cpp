@@ -27,10 +27,10 @@ namespace fnf
 	void StageBg::Render(HDC hdc)
 	{
 		GameObject::Render(hdc);
-		Vector2 pos = transform->GetPos();
-		pos = imagePivot;
-		BitBlt(hdc, 0, 0, mImage->GetWidth(), mImage->GetHeight(), mImage->GetHdc()
-			, 0, 0, SRCCOPY);
+		//Vector2 pos = transform->GetPos();
+		//pos = imagePivot;
+		//BitBlt(hdc, 0, 0, mImage->GetWidth(), mImage->GetHeight(), mImage->GetHdc()			, 0, 0, SRCCOPY);
+		TransparentBlt(hdc, 0, 0, mImage->GetWidth(), mImage->GetHeight(), mImage->GetHdc(), 0, 0, mImage->GetWidth(), mImage->GetHeight(), RGB(255,0,255));
 	}
 	void StageBg::Release()
 	{

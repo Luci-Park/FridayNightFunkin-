@@ -9,7 +9,6 @@ namespace fnf
 		~Image();
 
 		virtual HRESULT Load(const std::wstring& path) override;
-
 		HDC GetHdc() { return mHdc; }
 		HBITMAP GetBitmap() { return mBitmap; }
 		UINT GetWidth() { return mWidth; }
