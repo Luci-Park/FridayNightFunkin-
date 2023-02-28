@@ -1,5 +1,6 @@
 #include "LImage.h"
 #include "LApplication.h"
+#include <wincodec.h>
 extern fnf::Application application;
 namespace fnf
 {
@@ -20,7 +21,8 @@ namespace fnf
 		mBitmap = (HBITMAP)LoadImageW(nullptr
 			, finalPath.c_str(), IMAGE_BITMAP
 			, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		if (mBitmap == nullptr)
+		
+        if (mBitmap == nullptr)
 			return E_FAIL;
 		BITMAP bitInfo = {};
 		GetObject(mBitmap, sizeof(BITMAP), &bitInfo);
