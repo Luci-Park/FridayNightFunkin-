@@ -128,6 +128,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="LAnimation.h" />
+    <ClInclude Include="LAnimator.h" />
     <ClInclude Include="LNightCityBg.h" />
     <ClInclude Include="LColorBlock.h" />
     <ClInclude Include="LApplication.h" />
@@ -168,6 +170,8 @@
     <ClInclude Include="LTime.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="LAnimation.cpp" />
+    <ClCompile Include="LAnimator.cpp" />
     <ClCompile Include="LNightCityBg.cpp" />
     <ClCompile Include="LColorBlock.cpp" />
     <ClCompile Include="LComponent.cpp" />

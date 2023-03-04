@@ -170,6 +170,12 @@
       <Filter>Contents\Singers\Player</Filter>
     </ClInclude>
     <ClInclude Include="LSingers.h" />
+    <ClInclude Include="LAnimation.h">
+      <Filter>Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="LAnimator.h">
+      <Filter>Engine\Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FridayNightFunkin%27.rc">
@@ -273,5 +279,11 @@
       <Filter>Contents\Singers\Player</Filter>
     </ClCompile>
     <ClCompile Include="LSingers.cpp" />
+    <ClCompile Include="LAnimation.cpp">
+      <Filter>Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="LAnimator.cpp">
+      <Filter>Engine\Component</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
