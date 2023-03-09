@@ -13,12 +13,15 @@ namespace fnf
 		void Update();
 		void Render();
 		void Release();
-
+		void SetBgColor(COLORREF color) { mBackgroundColor = color; }
 		HWND GetHWnd() { return mHwnd; }
 		HDC GetHdc() { return mHdc; }
 		UINT GetScreenWidth() { return mWidth; }
 		UINT GetScreenHeight() { return mHeight; }
 
+	private:
+		void SetTitle();
+		void ClearScreen();
 	private:
 		HWND mHwnd;
 		HDC mHdc;
@@ -30,7 +33,7 @@ namespace fnf
 		UINT mHeight;
 
 		Vector2 mPos;
-
+		COLORREF mBackgroundColor;
 	};
 }
 
