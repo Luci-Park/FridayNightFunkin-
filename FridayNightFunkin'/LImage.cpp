@@ -33,6 +33,7 @@ namespace fnf
 		mHdc = CreateCompatibleDC(mainDC);
 
 		HBITMAP oldBitMap = (HBITMAP)SelectObject(mHdc, mBitmap);
+
 		DeleteObject(oldBitMap);
 
 		return S_OK;

@@ -4,7 +4,7 @@ namespace fnf
 	GameObject::GameObject()
 	{
 		mComponents.resize((UINT)eComponentType::SIZE);
-		transform = AddComponent<Transform>();
+		mTransform = AddComponent<Transform>();
 	}
 	GameObject::~GameObject()
 	{

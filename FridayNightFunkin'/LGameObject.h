@@ -35,7 +35,7 @@ namespace fnf
 			return nullptr;
 		}
 	protected:
-		Transform* transform;
+		Transform* mTransform;
 
 	private:
 		std::vector<Component*> mComponents;
