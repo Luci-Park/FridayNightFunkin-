@@ -19,7 +19,6 @@ namespace fnf
 	}
 	void ColorBlock::Initialize()
 	{
-		SetName(L"BlackBackground");
 		GameObject::Initialize();
 	}
 	void ColorBlock::Update()

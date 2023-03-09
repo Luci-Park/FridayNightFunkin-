@@ -1,6 +1,5 @@
 
 #include "LGameObject.h"
-#include "LImage.h"
 namespace fnf
 {
 	class ColorBlock : public GameObject

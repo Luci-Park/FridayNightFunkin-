@@ -141,6 +141,7 @@
     <ClInclude Include="LPlayerOne.h" />
     <ClInclude Include="LSingers.h" />
     <ClInclude Include="LSplashScene.h" />
+    <ClInclude Include="LSpriteRenderer.h" />
     <ClInclude Include="LStageBg.h" />
     <ClInclude Include="LStoryModeScene.h" />
     <ClInclude Include="LTitleScene.h" />
@@ -183,6 +184,7 @@
     <ClCompile Include="LPlayerOne.cpp" />
     <ClCompile Include="LSingers.cpp" />
     <ClCompile Include="LSplashScene.cpp" />
+    <ClCompile Include="LSpriteRenderer.cpp" />
     <ClCompile Include="LStageBg.cpp" />
     <ClCompile Include="LStoryModeScene.cpp" />
     <ClCompile Include="LTitleScene.cpp" />
