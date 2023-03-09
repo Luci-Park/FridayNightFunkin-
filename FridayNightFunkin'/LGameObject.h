@@ -18,6 +18,9 @@ namespace fnf
 		template<typename T>
 		T* AddComponent()
 		{
+			T* check = GetComponent<T>();
+			if (check != nullptr)
+				return check;
 			T* comp = new T();
 			UINT compType = (UINT)comp->GetType();
 			mComponents[compType] = comp;
@@ -36,6 +39,8 @@ namespace fnf
 			}
 			return nullptr;
 		}
+		
+		Transform* GetTransform() { return mTransform; }
 	protected:
 		Transform* mTransform;
 

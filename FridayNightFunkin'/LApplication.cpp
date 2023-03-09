@@ -18,8 +18,8 @@ namespace fnf
 	{
 		mHwnd = hWnd;
 		mHdc = GetDC(hWnd);
-		mWidth = 1280;
-		mHeight = 720;
+		mWidth = 1600;
+		mHeight = 900;
 		mBackgroundColor = RGB(0, 0, 0);
 		//비트맵 해상도 설정을 위해 윈도우 크기 계산
 		RECT rect = { 0, 0, mWidth, mHeight };
@@ -71,6 +71,13 @@ namespace fnf
 	void Application::Release()
 	{
 		SceneManager::Release();
+	}
+	Vector2 Application::GetScreenCenter()
+	{
+		Vector2 center;
+		center.y = mHeight / 2;
+		center.x = mWidth / 2;
+		return center;
 	}
 	void Application::SetTitle()
 	{

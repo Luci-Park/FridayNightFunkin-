@@ -2,8 +2,14 @@
 #pragma once
 struct Vector2
 {
-	int x;
-	int y;
+    static Vector2 Up;
+    static Vector2 Right;
+
+    static Vector2 One;
+    static Vector2 Zero;
+
+	float x;
+	float y;
 
 	Vector2()
 		:x(0),
@@ -11,15 +17,15 @@ struct Vector2
 	{
 
 	}
-	Vector2(int x, int y)
+	Vector2(float x, float y)
 		:x(x),
 		y(y)
 	{
 
 	} 
-    Vector2(UINT x, UINT y)
-        :x((int)x),
-        y((int)y)
+    Vector2(int x, int y)
+        :x((float)x),
+        y((float)y)
     {
 
     }

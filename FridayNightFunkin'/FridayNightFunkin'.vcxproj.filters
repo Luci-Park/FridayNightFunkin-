@@ -157,15 +157,6 @@
     <ClInclude Include="LColorBlock.h">
       <Filter>Contents\Background</Filter>
     </ClInclude>
-    <ClInclude Include="LNightCityBg.h">
-      <Filter>Contents\Background</Filter>
-    </ClInclude>
-    <ClInclude Include="LHauntedBg.h">
-      <Filter>Contents\Background</Filter>
-    </ClInclude>
-    <ClInclude Include="LLimousineBg.h">
-      <Filter>Contents\Background</Filter>
-    </ClInclude>
     <ClInclude Include="LPlayerOne.h">
       <Filter>Contents\Singers\Player</Filter>
     </ClInclude>
@@ -269,15 +260,6 @@
     <ClCompile Include="LColorBlock.cpp">
       <Filter>Contents\Background</Filter>
     </ClCompile>
-    <ClCompile Include="LNightCityBg.cpp">
-      <Filter>Contents\Background</Filter>
-    </ClCompile>
-    <ClCompile Include="LHauntedBg.cpp">
-      <Filter>Contents\Background</Filter>
-    </ClCompile>
-    <ClCompile Include="LLimousineBg.cpp">
-      <Filter>Contents\Background</Filter>
-    </ClCompile>
     <ClCompile Include="LPlayerOne.cpp">
       <Filter>Contents\Singers\Player</Filter>
     </ClCompile>
@@ -290,6 +272,9 @@
     </ClCompile>
     <ClCompile Include="LSpriteRenderer.cpp">
       <Filter>Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="LMath.cpp">
+      <Filter>Engine\Common</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

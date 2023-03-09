@@ -14,6 +14,9 @@ namespace fnf
 		void Render();
 		void Release();
 		void SetBgColor(COLORREF color) { mBackgroundColor = color; }
+		
+		Vector2 GetScreenCenter();
+
 		HWND GetHWnd() { return mHwnd; }
 		HDC GetHdc() { return mHdc; }
 		UINT GetScreenWidth() { return mWidth; }

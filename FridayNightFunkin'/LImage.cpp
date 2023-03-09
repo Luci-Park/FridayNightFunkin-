@@ -4,7 +4,7 @@
 extern fnf::Application application;
 namespace fnf
 {
-	const std::wstring Image::defaultPath = L"..\\FNFAssets\\Art\\";
+	const std::wstring Image::defaultPath = L"..\\FNFAssets\\Art\\24Bit\\";
 	Image::Image()
 		:mBitmap(NULL)
 		,mHdc(NULL)

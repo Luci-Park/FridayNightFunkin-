@@ -3,6 +3,7 @@
 namespace fnf
 {
 	class Image;
+	class Transform;
 	class SpriteRenderer : public Component
 	{
 	public:
@@ -14,8 +15,13 @@ namespace fnf
 		virtual void Render(HDC hdc)override;
 		virtual void Release()override;
 
+		void SetSprite(Image* image) { mImage = image; }
+		void SetOffset(Vector2 offset) { mOffset = offset;}
+		void SetScale(Vector2 scale) { mScale = scale; }
 	private:
-			Image* mImage;
+		Image* mImage;
+		Vector2 mOffset;
+		Vector2 mScale;
 	};
 }
 

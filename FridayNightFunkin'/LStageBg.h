@@ -3,6 +3,7 @@
 #include "LImage.h"
 namespace fnf
 {
+	class SpriteRenderer;
 	class StageBg : public GameObject
 	{
 	public:
@@ -15,8 +16,7 @@ namespace fnf
 		virtual void Render(HDC hdc)override;
 		virtual void Release()override;
 	private:
-		Image* mImage;
-		Vector2 imagePivot;
+		SpriteRenderer* mSprite;
 	};
 }
 
