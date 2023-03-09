@@ -176,6 +176,9 @@
     <ClInclude Include="LAnimator.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
+    <ClInclude Include="LSpriteRenderer.h">
+      <Filter>Engine\Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FridayNightFunkin%27.rc">
@@ -283,6 +286,9 @@
       <Filter>Engine\Component</Filter>
     </ClCompile>
     <ClCompile Include="LAnimator.cpp">
+      <Filter>Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="LSpriteRenderer.cpp">
       <Filter>Engine\Component</Filter>
     </ClCompile>
   </ItemGroup>
