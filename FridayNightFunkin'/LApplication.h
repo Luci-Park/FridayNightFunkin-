@@ -12,9 +12,7 @@ namespace fnf
 		void Run();
 		void Update();
 		void Render();
-		void Release();
-		void SetBgColor(COLORREF color) { mBackgroundColor = color; }
-		
+		void Release();		
 		Vector2 GetScreenCenter();
 
 		HWND GetHWnd() { return mHwnd; }
@@ -36,7 +34,6 @@ namespace fnf
 		UINT mHeight;
 
 		Vector2 mPos;
-		COLORREF mBackgroundColor;
 	};
 }
 

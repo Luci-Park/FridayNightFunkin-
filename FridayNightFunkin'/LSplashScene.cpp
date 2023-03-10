@@ -12,7 +12,7 @@ namespace fnf
     }
     void SplashScene::Initialize()
     {
-        AddGameObject(new ColorBlock(RGB(0, 0, 0)), eLayerType::Background);
+        //AddGameObject(new ColorBlock(RGB(0, 0, 0)), eLayerType::Background);
         AddGameObject(new BoyFriend(), eLayerType::Player1);
         Scene::Initialize();
     }

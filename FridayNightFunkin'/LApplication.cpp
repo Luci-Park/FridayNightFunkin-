@@ -20,7 +20,6 @@ namespace fnf
 		mHdc = GetDC(hWnd);
 		mWidth = 1600;
 		mHeight = 900;
-		mBackgroundColor = RGB(0, 0, 0);
 		//비트맵 해상도 설정을 위해 윈도우 크기 계산
 		RECT rect = { 0, 0, mWidth, mHeight };
 		AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, false);
@@ -88,7 +87,7 @@ namespace fnf
 	}
 	void Application::ClearScreen()
 	{
-		HBRUSH bgBrush = CreateSolidBrush(mBackgroundColor);
+		HBRUSH bgBrush = CreateSolidBrush(RGB(0, 0, 0));
 		HBRUSH oldBrush = (HBRUSH)SelectObject(mBackHDC, bgBrush);
 		Rectangle(mBackHDC, -1, -1, mWidth + 2, mHeight + 2);
 		SelectObject(mBackHDC, oldBrush);

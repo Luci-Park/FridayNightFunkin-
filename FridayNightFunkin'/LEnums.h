@@ -21,17 +21,18 @@ enum class eLayerType
 	Player1,
 	Player2,
 	Notes,
+	Particles,
 	UI,
-	SIZE
+	SIZE = 16
 };
 
 
 enum class eComponentType
 {
 	Transform,
-	Collider,
 	SpriteRenderer,
 	Animator,
+	Collider,
 	Audio,
 	SIZE
 };
