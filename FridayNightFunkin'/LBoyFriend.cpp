@@ -4,6 +4,7 @@ namespace fnf
 {
 	BoyFriend::BoyFriend()
 	{
+		SetName(L"Boyfriend");
 		mAnimator = AddComponent<Animator>();
 	}
 	BoyFriend::~BoyFriend()
@@ -11,9 +12,12 @@ namespace fnf
 	}
 	void BoyFriend::Initialize()
 	{
+		mTransform->SetPos(Vector2(10, 10));
+		mAnimator->CreateAnimations(
+			L"..\\FNFAssets\\Art\\24Bit\\Characters\\Boyfriend\\Idle",
+			L"BoyFriendIdle", Vector2::Zero, 0.1f);
+		mAnimator->Play(L"BoyFriendIdle", true);
 		GameObject::Initialize();
-		mAnimator->CreateAnimations(L"Characters\\Boyfriend\\Idle", Vector2::Zero, 0.1f);
-		mAnimator->
 	}
 	void BoyFriend::Update()
 	{

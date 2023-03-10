@@ -2,6 +2,8 @@
 #include "LTime.h"
 #include "LTransform.h"
 #include "LImage.h"
+#include "LAnimator.h"
+#include "LGameObject.h"
 namespace fnf
 {
 	Animation::Animation()
@@ -34,6 +36,21 @@ namespace fnf
 	}
 	void Animation::Render(HDC hdc)
 	{
+		Transform* tr
+			= mAnimator->GetOwner()->GetComponent<Transform>();
+		Vector2 scale = tr->GetScale();
+		Vector2 pos = tr->GetPos();
+		pos += mFrames[mFrameNum].offset;
+		pos.x -= mFrames[mFrameNum].size.x / 2.0f;
+		pos.y -= mFrames[mFrameNum].size.y;
+
+		TransparentBlt(hdc, pos.x, pos.y
+			, mFrames[mFrameNum].size.x * scale.x
+			, mFrames[mFrameNum].size.y * scale.y
+			, mSpriteSheet->GetHdc()
+			, mFrames[mFrameNum].leftTop.x, mFrames[mFrameNum].leftTop.y
+			, mFrames[mFrameNum].size.x, mFrames[mFrameNum].size.y,
+			RGB(255, 0, 255));
 	}
 	void Animation::Create(Image* sheet, Vector2 leftTop, UINT column, UINT row, UINT spriteLength, Vector2 offset, float duration)
 	{

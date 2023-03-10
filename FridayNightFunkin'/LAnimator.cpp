@@ -66,7 +66,7 @@ namespace fnf
 		mAnimations.insert(std::make_pair(name, animation));
 	}
 
-	void Animator::CreateAnimations(const std::wstring& path, Vector2 offset, float duration)
+	void Animator::CreateAnimations(const std::wstring& path, const std::wstring& name, Vector2 offset, float duration)
 	{
 		UINT width = 0;
 		UINT height = 0;
@@ -97,9 +97,7 @@ namespace fnf
 			fileCount++;
 		}
 
-		std::wstring key = fs.parent_path().filename();
-		key += fs.filename();
-		Image* mSpriteSheet = Image::CreateEmptyImage(key, width * fileCount, height);
+		Image* mSpriteSheet = Image::CreateEmptyImage(name, width * fileCount, height);
 
 		//
 		int index = 0;
@@ -117,7 +115,7 @@ namespace fnf
 			index++;
 		}
 
-		CreateAnimation(key, mSpriteSheet, Vector2::Zero, index, 1, index, offset, duration);
+		CreateAnimation(name, mSpriteSheet, Vector2::Zero, index, 1, index, offset, duration);
 	}
 
 	Animation* Animator::FindAnimation(const std::wstring& name)

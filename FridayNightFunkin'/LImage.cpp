@@ -5,7 +5,7 @@
 extern fnf::Application application;
 namespace fnf
 {
-	const std::wstring Image::defaultPath = L"..\\FNFAssets\\Art\\24Bit\\";
+	//const std::wstring Image::defaultPath = L"..\\FNFAssets\\Art\\24Bit\\";
 	Image* Image::CreateEmptyImage(const std::wstring& name, UINT width, UINT height)
 	{
 		if (width == 0 || height == 0)
@@ -42,9 +42,9 @@ namespace fnf
 	{
 	}
 	HRESULT Image::Load(const std::wstring& path){
-		std::wstring finalPath = defaultPath + path;
+		//std::wstring finalPath = defaultPath + path;
 		mBitmap = (HBITMAP)LoadImageW(nullptr
-			, finalPath.c_str(), IMAGE_BITMAP
+			, path.c_str(), IMAGE_BITMAP
 			, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
 		
         if (mBitmap == nullptr)
