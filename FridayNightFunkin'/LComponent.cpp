@@ -20,8 +20,4 @@ namespace fnf
     void Component::Release()
     {
     }
-    void Component::SetOwner(GameObject* owner)
-    {
-        mOwner = owner;
-    }
 }

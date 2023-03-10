@@ -2,6 +2,7 @@
 #include"LScene.h"
 namespace fnf
 {
+	class Image;
 	class SplashScene : public Scene
 	{
 	public:
@@ -17,5 +18,6 @@ namespace fnf
 		virtual void OnExit() override;
 
 	private:
+		Image* mImage;
 	};
 }

@@ -87,7 +87,7 @@ namespace fnf
 	}
 	void Application::ClearScreen()
 	{
-		HBRUSH bgBrush = CreateSolidBrush(RGB(0, 0, 0));
+		HBRUSH bgBrush = CreateSolidBrush(RGB(255, 255, 255));
 		HBRUSH oldBrush = (HBRUSH)SelectObject(mBackHDC, bgBrush);
 		Rectangle(mBackHDC, -1, -1, mWidth + 2, mHeight + 2);
 		SelectObject(mBackHDC, oldBrush);

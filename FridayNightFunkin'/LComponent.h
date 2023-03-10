@@ -15,8 +15,8 @@ namespace fnf
 		virtual void Release();
 
 		eComponentType GetType() { return mType; }
+		void SetOwner(GameObject* owner) { mOwner = owner; }
 		GameObject* GetOwner() { return mOwner; }
-		void SetOwner(GameObject* owner);
 	private:
 		const eComponentType mType;
 		GameObject* mOwner;
