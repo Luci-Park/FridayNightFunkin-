@@ -5,6 +5,7 @@ namespace fnf
 	class Image : public Resource
 	{
 	public:
+		static Image* CreateEmptyImage(const std::wstring& name, UINT width, UINT height);
 		Image();
 		~Image();
 

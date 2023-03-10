@@ -8,7 +8,7 @@ namespace fnf
 	StageBg::StageBg()
 	{
 		mSprite = AddComponent<SpriteRenderer>();
-		mSprite->SetSprite(Resources::Load<Image>(eResourceKeys::StageBackground));
+		//mSprite->SetSprite(Resources::Load<Image>();
 		mTransform->SetPos(application.GetScreenCenter());
 	}
 	StageBg::~StageBg()

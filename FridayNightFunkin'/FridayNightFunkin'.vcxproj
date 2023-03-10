@@ -130,13 +130,12 @@
   <ItemGroup>
     <ClInclude Include="LAnimation.h" />
     <ClInclude Include="LAnimator.h" />
+    <ClInclude Include="LBoyFriend.h" />
     <ClInclude Include="LColorBlock.h" />
     <ClInclude Include="LApplication.h" />
     <ClInclude Include="CommonInclude.h" />
     <ClInclude Include="LComponent.h" />
     <ClInclude Include="LOptionsScene.h" />
-    <ClInclude Include="LPlayerOne.h" />
-    <ClInclude Include="LSingers.h" />
     <ClInclude Include="LSplashScene.h" />
     <ClInclude Include="LSpriteRenderer.h" />
     <ClInclude Include="LStageBg.h" />
@@ -170,14 +169,13 @@
   <ItemGroup>
     <ClCompile Include="LAnimation.cpp" />
     <ClCompile Include="LAnimator.cpp" />
+    <ClCompile Include="LBoyFriend.cpp" />
     <ClCompile Include="LMath.cpp" />
     <ClCompile Include="LColorBlock.cpp" />
     <ClCompile Include="LComponent.cpp" />
     <ClCompile Include="LEntity.cpp" />
     <ClCompile Include="LImage.cpp" />
     <ClCompile Include="LOptionsScene.cpp" />
-    <ClCompile Include="LPlayerOne.cpp" />
-    <ClCompile Include="LSingers.cpp" />
     <ClCompile Include="LSplashScene.cpp" />
     <ClCompile Include="LSpriteRenderer.cpp" />
     <ClCompile Include="LStageBg.cpp" />

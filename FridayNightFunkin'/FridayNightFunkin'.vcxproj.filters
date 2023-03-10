@@ -157,10 +157,6 @@
     <ClInclude Include="LColorBlock.h">
       <Filter>Contents\Background</Filter>
     </ClInclude>
-    <ClInclude Include="LPlayerOne.h">
-      <Filter>Contents\Singers\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="LSingers.h" />
     <ClInclude Include="LAnimation.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
@@ -169,6 +165,9 @@
     </ClInclude>
     <ClInclude Include="LSpriteRenderer.h">
       <Filter>Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="LBoyFriend.h">
+      <Filter>Contents\Singers\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -260,10 +259,6 @@
     <ClCompile Include="LColorBlock.cpp">
       <Filter>Contents\Background</Filter>
     </ClCompile>
-    <ClCompile Include="LPlayerOne.cpp">
-      <Filter>Contents\Singers\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="LSingers.cpp" />
     <ClCompile Include="LAnimation.cpp">
       <Filter>Engine\Component</Filter>
     </ClCompile>
@@ -275,6 +270,9 @@
     </ClCompile>
     <ClCompile Include="LMath.cpp">
       <Filter>Engine\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="LBoyFriend.cpp">
+      <Filter>Contents\Singers\Player</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

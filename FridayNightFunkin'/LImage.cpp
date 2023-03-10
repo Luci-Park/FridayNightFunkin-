@@ -1,10 +1,36 @@
 #include "LImage.h"
 #include "LApplication.h"
+#include "LResources.h"
 #include <wincodec.h>
 extern fnf::Application application;
 namespace fnf
 {
 	const std::wstring Image::defaultPath = L"..\\FNFAssets\\Art\\24Bit\\";
+	Image* Image::CreateEmptyImage(const std::wstring& name, UINT width, UINT height)
+	{
+		if (width == 0 || height == 0)
+			return nullptr;
+		Image* image = Resources::Find<Image>(name);
+		if (image != nullptr)
+			return image;
+		image = new Image();
+		HDC mainHDC = application.GetHdc();
+		image->mBitmap = CreateCompatibleBitmap(mainHDC, width, height);
+		image->mHdc = CreateCompatibleDC(mainHDC);
+
+		HBITMAP oldBitmap = (HBITMAP)SelectObject(image->mHdc, image->mBitmap);
+		DeleteObject(oldBitmap);
+
+		image->mWidth = width;
+		image->mHeight = height;
+
+		image->SetKey(name);
+		Resources::Insert<Image>(name, image);
+
+		Rectangle(image->GetHdc(), -1, -1, image->mWidth + 1, image->mHeight + 1);
+
+		return image;
+	}
 	Image::Image()
 		:mBitmap(NULL)
 		,mHdc(NULL)
@@ -17,7 +43,6 @@ namespace fnf
 	}
 	HRESULT Image::Load(const std::wstring& path){
 		std::wstring finalPath = defaultPath + path;
-		//std::wstring finalPath = L"C:\\Users\\user\\Documents\\_Quve17\\Luci\\Coding\\AssortRock\\AssortRockCpp\\WinAPI\\Resources\\Idle.bmp";
 		mBitmap = (HBITMAP)LoadImageW(nullptr
 			, finalPath.c_str(), IMAGE_BITMAP
 			, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);

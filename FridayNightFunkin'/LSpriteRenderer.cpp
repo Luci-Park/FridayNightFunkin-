@@ -6,7 +6,6 @@ namespace fnf
 	SpriteRenderer::SpriteRenderer()
 		:Component(eComponentType::SpriteRenderer),
 		mImage(nullptr),
-		mScale(Vector2::One),
 		mOffset(Vector2::Zero)
 	{
 	}
@@ -27,19 +26,22 @@ namespace fnf
 
 		Vector2 drawPos = tr->GetPos() + mOffset;
 		Vector2 size = Vector2((int)mImage->GetWidth(), (int)mImage->GetHeight());
-		size.x *= mScale.x;
-		size.y *= mScale.y;
-		drawPos.x -= size.x * 0.5;
-		drawPos.y -= size.y * mScale.y * 0.5;
+		drawPos.x -= size.x * scale.x* 0.5;
+		drawPos.y -= size.y * scale.y * 0.5;
 
 		TransparentBlt(hdc, 0, 0,
 			mImage->GetWidth(), mImage->GetHeight(),
 			mImage->GetHdc(), drawPos.x, drawPos.y,
-			mImage->GetWidth() * mScale.x,
-			mImage->GetHeight() * mScale.y,
+			mImage->GetWidth() * scale.x,
+			mImage->GetHeight() * scale.y,
 			RGB(255, 0, 255));
 	}
 	void SpriteRenderer::Release()
 	{
+		if (mImage != nullptr)
+		{
+			delete mImage;
+			mImage = nullptr;
+		}
 	}
 }

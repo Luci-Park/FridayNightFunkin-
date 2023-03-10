@@ -1,20 +1,20 @@
 #pragma once
-#include "LSingers.h"
-#include "LImage.h"
+#include "LGameObject.h"
 namespace fnf
 {
-	class PlayerOne : public Singer
+	class Animator;
+	class BoyFriend : public GameObject
 	{
 	public:
-		PlayerOne();
-		~PlayerOne();
-		
+		BoyFriend();
+		virtual ~BoyFriend();
+
 		virtual void Initialize() override;
 		virtual void Update() override;
 		virtual void Render(HDC hdc) override;
 		virtual void Release() override;
-		
 	private:
-		Image* mImage;
+		Animator* mAnimator;
 	};
 }
+

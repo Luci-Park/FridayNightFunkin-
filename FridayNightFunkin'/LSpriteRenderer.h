@@ -17,11 +17,9 @@ namespace fnf
 
 		void SetSprite(Image* image) { mImage = image; }
 		void SetOffset(Vector2 offset) { mOffset = offset;}
-		void SetScale(Vector2 scale) { mScale = scale; }
 	private:
 		Image* mImage;
 		Vector2 mOffset;
-		Vector2 mScale;
 	};
 }
 
