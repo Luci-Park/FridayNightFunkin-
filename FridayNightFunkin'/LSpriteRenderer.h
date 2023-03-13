@@ -1,5 +1,6 @@
 #pragma once
 #include "LComponent.h"
+#include "LSprite.h"
 namespace fnf
 {
 	class Image;
@@ -14,15 +15,13 @@ namespace fnf
 		virtual void Render(HDC hdc) override;
 		virtual void Release() override;
 
-		void SetImage(const std::wstring& name, const std::wstring& path, Vector2 leftTop);
-		void SetScale(Vector2 scale) { mScale = scale; }
+		void SetImage(Image* image, Sprite sp);
+		void SetSprite(Sprite sprite) { mSprite = sprite; }
 		void SetOffset(Vector2 offset) { mOffset = offset; }
 	private:
 		Image* mImage;
-		Vector2 mLeftTop;
-		Vector2 mScale;
+		Sprite mSprite;
 		Vector2 mOffset;
-
 	};
 }
 

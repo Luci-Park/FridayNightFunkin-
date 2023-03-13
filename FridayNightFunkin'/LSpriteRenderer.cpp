@@ -7,7 +7,9 @@
 namespace fnf
 {
 	SpriteRenderer::SpriteRenderer()
-		:Component(eComponentType::SpriteRenderer)
+		: Component(eComponentType::SpriteRenderer)
+		, mImage(nullptr)
+		, mOffset(Vector2::Zero)
 	{
 	}
 	SpriteRenderer::~SpriteRenderer()
@@ -25,18 +27,16 @@ namespace fnf
 		Vector2 scale = tr->GetScale();
 		Vector2 pos = tr->GetPos();
 		pos = Camera::CaluatePos(pos);
-		pos += mOffset;
-		pos.x -= mImage->GetWidth() / 2;
-		pos.y -= mImage->GetHeight() / 2;
-		TransparentBlt(hdc, pos.x, pos.y, mImage->GetWidth() * scale.x, mImage->GetHeight() * scale.y,
-			mImage->GetHdc(), 0, 0, mImage->GetWidth(), mImage->GetHeight(), RGB(255, 0, 255));
+		pos += mOffset + mSprite.offset;
+		TransparentBlt(hdc, pos.x, pos.y, mSprite.size.x * scale.x , mSprite.size.y * scale.y,
+			mImage->GetHdc(), 0, 0, mSprite.size.x, mSprite.size.y, RGB(255, 0, 255));
 	}
 	void SpriteRenderer::Release()
 	{
 	}
-	void SpriteRenderer::SetImage(const std::wstring& name, const std::wstring& path, Vector2 leftTop)
+	void SpriteRenderer::SetImage(Image* image, Sprite sp)
 	{
-		mImage = Resources::Load<Image>(name, path);
-		mLeftTop = leftTop;
+		mImage = image;
+		mSprite = sp;
 	}
 }

@@ -1,6 +1,6 @@
 #pragma once
 #include "LResource.h"
-
+#include "LSprite.h"
 namespace fnf
 {
 	class Image : public Resource
@@ -17,7 +17,7 @@ namespace fnf
 		HBITMAP GetBitmap() { return mBitmap; }
 		UINT GetWidth() { return mWidth; }
 		UINT GetHeight() { return mHeight; }
-
+		Sprite GetFullImageSprite();
 	private:
 		HBITMAP mBitmap;
 		HDC mHdc;

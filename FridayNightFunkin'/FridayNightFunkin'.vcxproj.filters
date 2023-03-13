@@ -44,11 +44,14 @@
     <Filter Include="Engine\High Level Interface">
       <UniqueIdentifier>{71bb8d76-4cde-4532-83dd-df93392e392b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Component\Animator">
-      <UniqueIdentifier>{3c58dc06-9ff5-4884-96e5-87dc162bdbdb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Component\Collider">
       <UniqueIdentifier>{e99e21d2-0269-408a-a9ca-62a09ef5e2ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Component\Sprites">
+      <UniqueIdentifier>{7182a8e8-1768-4886-96b1-384c4bdee201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Component\Sprites\Animator">
+      <UniqueIdentifier>{3c58dc06-9ff5-4884-96e5-87dc162bdbdb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -77,10 +80,10 @@
       <Filter>Engine\Component\Collider</Filter>
     </ClInclude>
     <ClInclude Include="LAnimation.h">
-      <Filter>Engine\Component\Animator</Filter>
+      <Filter>Engine\Component\Sprites\Animator</Filter>
     </ClInclude>
     <ClInclude Include="LAnimator.h">
-      <Filter>Engine\Component\Animator</Filter>
+      <Filter>Engine\Component\Sprites\Animator</Filter>
     </ClInclude>
     <ClInclude Include="LCollisionManager.h">
       <Filter>Engine\Component\Collider</Filter>
@@ -148,6 +151,9 @@
     <ClInclude Include="LSpriteRenderer.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
+    <ClInclude Include="LSprite.h">
+      <Filter>Engine\Component\Sprites</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FridayNightFunkin%27.rc">
@@ -179,10 +185,10 @@
       <Filter>Engine\Component\Collider</Filter>
     </ClCompile>
     <ClCompile Include="LAnimation.cpp">
-      <Filter>Engine\Component\Animator</Filter>
+      <Filter>Engine\Component\Sprites\Animator</Filter>
     </ClCompile>
     <ClCompile Include="LAnimator.cpp">
-      <Filter>Engine\Component\Animator</Filter>
+      <Filter>Engine\Component\Sprites\Animator</Filter>
     </ClCompile>
     <ClCompile Include="LCollisionManager.cpp">
       <Filter>Engine\Component\Collider</Filter>
@@ -239,7 +245,7 @@
       <Filter>Contents</Filter>
     </ClCompile>
     <ClCompile Include="LSpriteRenderer.cpp">
-      <Filter>Engine\Component</Filter>
+      <Filter>Engine\Component\Sprites</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -132,6 +132,7 @@
     <ClInclude Include="FridayNightFunkin%27.h" />
     <ClInclude Include="LSpriteRenderer.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="LSprite.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="LAnimation.h" />
     <ClInclude Include="LAnimator.h" />

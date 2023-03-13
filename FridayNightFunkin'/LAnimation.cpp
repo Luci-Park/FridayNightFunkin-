@@ -56,16 +56,16 @@ namespace fnf
 
         Vector2 pos = tr->GetPos();
         pos = Camera::CaluatePos(pos);
-        pos += mSpriteSheet[mSpriteIndex].offset;
-        pos.x -= mSpriteSheet[mSpriteIndex].size.x / 2.0f;
-        pos.y -= mSpriteSheet[mSpriteIndex].size.y;
+        pos += mSpriteSheet[mSpriteIndex].sp.offset;
+        pos.x -= mSpriteSheet[mSpriteIndex].sp.size.x / 2.0f;
+        pos.y -= mSpriteSheet[mSpriteIndex].sp.size.y;
 
         TransparentBlt(hdc, pos.x, pos.y
-            , mSpriteSheet[mSpriteIndex].size.x * scale.x
-            , mSpriteSheet[mSpriteIndex].size.y * scale.y
+            , mSpriteSheet[mSpriteIndex].sp.size.x * scale.x
+            , mSpriteSheet[mSpriteIndex].sp.size.y * scale.y
             , mSheetImage->GetHdc()
-            , mSpriteSheet[mSpriteIndex].leftTop.x, mSpriteSheet[mSpriteIndex].leftTop.y
-            , mSpriteSheet[mSpriteIndex].size.x, mSpriteSheet[mSpriteIndex].size.y,
+            , mSpriteSheet[mSpriteIndex].sp.leftTop.x, mSpriteSheet[mSpriteIndex].sp.leftTop.y
+            , mSpriteSheet[mSpriteIndex].sp.size.x, mSpriteSheet[mSpriteIndex].sp.size.y,
             RGB(255, 0, 255));
     }
 
@@ -82,12 +82,12 @@ namespace fnf
 
         for (size_t i = 0; i < spriteLength; i++)
         {
-            Sprite spriteInfo;
+            Frame spriteInfo;
 
-            spriteInfo.leftTop.x = leftTop.x + (size.x * i);
-            spriteInfo.leftTop.y = leftTop.y;
-            spriteInfo.size = size;
-            spriteInfo.offset = offset;
+            spriteInfo.sp.leftTop.x = leftTop.x + (size.x * i);
+            spriteInfo.sp.leftTop.y = leftTop.y;
+            spriteInfo.sp.size = size;
+            spriteInfo.sp.offset = offset;
             spriteInfo.duration = duration;
 
             mSpriteSheet.push_back(spriteInfo);

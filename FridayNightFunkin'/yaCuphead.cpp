@@ -27,7 +27,8 @@ namespace fnf
 		//tr->SetScale(Vector2(1.5f, 1.5f));
 
 		mSpriteRenderer = AddComponent<SpriteRenderer>();
-		mSpriteRenderer->SetImage(L"Cuphead", L"..\\Resources\\Cuphead_Stage.bmp", Vector2::Zero);
+		Image* img = Resources::Load<Image>(L"Cuphead", L"..\\Resources\\Cuphead_Stage.bmp");
+		mSpriteRenderer->SetImage(img, img->GetFullImageSprite());
 		mAnimator = AddComponent<Animator>();
 		/*mAnimator->CreateAnimation(L"FowardRun", mImage, Vector2::Zero, 16, 8, 16, Vector2::Zero, 0.1);
 		mAnimator->CreateAnimation(L"FowardRight", mImage, Vector2(0.0f, 113.0f), 16, 8, 15, Vector2::Zero, 0.1);

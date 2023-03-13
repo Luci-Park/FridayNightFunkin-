@@ -73,4 +73,12 @@ namespace fnf
 
 		return S_OK;
 	}
+	Sprite Image::GetFullImageSprite()
+	{
+		Sprite sp;
+		sp.leftTop = Vector2::Zero;
+		sp.size = Vector2((int)mWidth, mHeight);
+		sp.offset -= sp.size / 2;
+		return sp;
+	}
 }
