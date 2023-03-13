@@ -9,6 +9,7 @@
 #include "yaBaseBullet.h"
 #include "LScene.h"
 #include "LObject.h"
+#include "LSpriteRenderer.h"
 
 namespace fnf
 {
@@ -25,11 +26,12 @@ namespace fnf
 		//tr->SetPos(Vector2(400.0f, 400.0f));
 		//tr->SetScale(Vector2(1.5f, 1.5f));
 
-		Image* mImage = Resources::Load<Image>(L"Cuphead", L"..\\Resources\\Cuphead_Stage.bmp");
+		mSpriteRenderer = AddComponent<SpriteRenderer>();
+		mSpriteRenderer->SetImage(L"Cuphead", L"..\\Resources\\Cuphead_Stage.bmp", Vector2::Zero);
 		mAnimator = AddComponent<Animator>();
-		mAnimator->CreateAnimation(L"FowardRun", mImage, Vector2::Zero, 16, 8, 16, Vector2::Zero, 0.1);
+		/*mAnimator->CreateAnimation(L"FowardRun", mImage, Vector2::Zero, 16, 8, 16, Vector2::Zero, 0.1);
 		mAnimator->CreateAnimation(L"FowardRight", mImage, Vector2(0.0f, 113.0f), 16, 8, 15, Vector2::Zero, 0.1);
-		mAnimator->CreateAnimation(L"Idle", mImage, Vector2(0.0f, 113.0f * 5), 16, 8, 9, Vector2(-50.0f, -50.0f), 0.1);
+		mAnimator->CreateAnimation(L"Idle", mImage, Vector2(0.0f, 113.0f * 5), 16, 8, 9, Vector2(-50.0f, -50.0f), 0.1);*/
 		mAnimator->CreateAnimations(L"..\\Resources\\Chalise\\Idle", Vector2::Zero, 0.1f);
 		mAnimator->CreateAnimations(L"..\\Resources\\Chalise\\Aim\\Straight", Vector2::Zero, 0.1f);
 

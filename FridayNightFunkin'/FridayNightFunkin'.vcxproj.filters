@@ -145,6 +145,9 @@
     <ClInclude Include="yaTitleScene.h">
       <Filter>Contents</Filter>
     </ClInclude>
+    <ClInclude Include="LSpriteRenderer.h">
+      <Filter>Engine\Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FridayNightFunkin%27.rc">
@@ -234,6 +237,9 @@
     </ClCompile>
     <ClCompile Include="yaTitleScene.cpp">
       <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="LSpriteRenderer.cpp">
+      <Filter>Engine\Component</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

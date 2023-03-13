@@ -7,7 +7,7 @@ namespace fnf
 		: mState(eState::Active)
 	{
 		mComponents.resize((UINT)eComponentType::End);
-		AddComponent<Transform>();
+		mTransform = AddComponent<Transform>();
 	}
 
 	GameObject::~GameObject()

@@ -5,6 +5,7 @@
 namespace fnf
 {
 	class Animator;
+	class SpriteRenderer;
 	class Cuphead : public GameObject
 	{
 	public:
@@ -39,5 +40,6 @@ namespace fnf
 	private:
 		eCupheadState mState;
 		Animator* mAnimator;
+		SpriteRenderer* mSpriteRenderer;
 	};
 }

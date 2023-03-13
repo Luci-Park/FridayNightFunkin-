@@ -1,6 +1,7 @@
 #pragma once
 #include "LEntity.h"
 #include "LComponent.h"
+#include "LTransform.h"
 
 namespace fnf
 {
@@ -52,6 +53,7 @@ namespace fnf
 		eState GetState() { return mState; }
 		void SetState(eState state) { mState = state; }
 
+		Transform* mTransform;
 
 	private:
 		std::vector<Component*> mComponents;
