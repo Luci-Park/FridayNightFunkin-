@@ -3,22 +3,30 @@
 
 enum class eSceneType
 {
+	Splash1,
+	Splash2,
+	Splash3,
+	Splash4,
 	Title,
-	Play,
-	Ending,
-	End,
+	Campaign,
+	Tutorial,
+	Week1,
+	Week2,
+	Week3,
+	GameOver,
+	Size
 };
 
 enum class eLayerType
 {
 	BG,
-	Monster,
 	Player,
-	Bullet,
-	Test,
+	Opponent,
+	GameCanvas,
+	Notes,
 	Effect,
 	UI,
-	End = 16,
+	Size = 16,
 };
 
 enum class eComponentType
@@ -28,5 +36,5 @@ enum class eComponentType
 	Animator,
 	Collider,
 	Audio,
-	End,
+	Size
 };

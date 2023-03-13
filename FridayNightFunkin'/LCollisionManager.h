@@ -28,7 +28,7 @@ namespace fnf
 		static void Clear();
 
 	private:
-		static WORD mMatrix[(UINT)eLayerType::End];
+		static WORD mMatrix[(UINT)eLayerType::Size];
 		static std::map<UINT64, bool> mCollisionMap;
 	};
 }

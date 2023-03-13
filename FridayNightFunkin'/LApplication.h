@@ -14,11 +14,13 @@ namespace fnf
 		void Run();
 		void Update();
 		void Render();
+		void Release();
 
 		HWND GetHwnd() { return mHwnd; }
 		HDC GetHdc() { return mHdc; }
 		UINT GetWidth() { return mWidth; }
 		UINT GetHeight() { return mHeight; }
+		Vector2 GetCenter() { return Vector2((float)mWidth / 2, (float)mHeight / 2); }
 
 	private:
 		void clear();

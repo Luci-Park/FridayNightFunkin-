@@ -68,9 +68,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         }
     }
 
-    fnf::SceneManager::Release();
-    fnf::Resources::Release();
-
+    application.Release();
     return (int) msg.wParam;
 }
 

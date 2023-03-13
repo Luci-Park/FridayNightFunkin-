@@ -6,8 +6,8 @@ namespace fnf
 {
 	Scene::Scene()
 	{
-		mLayers.reserve(5);
-		mLayers.resize((UINT)eLayerType::End);
+		mLayers.reserve((UINT)eLayerType::Size);
+		mLayers.resize((UINT)eLayerType::Size);
 	}
 	Scene::~Scene()
 	{
@@ -72,7 +72,7 @@ namespace fnf
 	void Scene::OnExit()
 	{
 	}
-	void Scene::AddGameObeject(GameObject* obj, eLayerType layer)
+	void Scene::AddGameObject(GameObject* obj, eLayerType layer)
 	{
 		mLayers[(UINT)layer].AddGameObject(obj);
 	}

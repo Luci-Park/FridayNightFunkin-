@@ -11,7 +11,7 @@ namespace fnf::object
 	{
 		T* gameObj = new T();
 		Scene* scene = SceneManager::GetActiveScene();
-		scene->AddGameObeject(gameObj, type);
+		scene->AddGameObject(gameObj, type);
 		gameObj->Initialize();
 		return gameObj;
 	}
@@ -21,7 +21,7 @@ namespace fnf::object
 	{
 		T* gameObj = new T();
 		Scene* scene = SceneManager::GetActiveScene();
-		scene->AddGameObeject(gameObj, type);
+		scene->AddGameObject(gameObj, type);
 		gameObj->Initialize();
 		gameObj->GameObject::GetComponent<Transform>()->SetPos(pos);
 		return gameObj;

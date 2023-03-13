@@ -4,15 +4,15 @@
 
 namespace fnf
 {
-	WORD CollisionManager::mMatrix[(UINT)eLayerType::End] = {};
+	WORD CollisionManager::mMatrix[(UINT)eLayerType::Size] = {};
 	std::map<UINT64, bool> CollisionManager::mCollisionMap;
 	void CollisionManager::Update()
 	{
 		Scene* scene = SceneManager::GetActiveScene();
 
-		for (UINT row = 0; row < (UINT)eLayerType::End; row++)
+		for (UINT row = 0; row < (UINT)eLayerType::Size; row++)
 		{
-			for (UINT col = 0; col < (UINT)eLayerType::End; col++)
+			for (UINT col = 0; col < (UINT)eLayerType::Size; col++)
 			{
 				if (mMatrix[row] & (1 << col))
 				{
@@ -134,7 +134,7 @@ namespace fnf
 
 	void CollisionManager::Clear()
 	{
-		memset(mMatrix, 0, sizeof(WORD) * (UINT)eLayerType::End);
+		memset(mMatrix, 0, sizeof(WORD) * (UINT)eLayerType::Size);
 		mCollisionMap.clear();
 	}
 }

@@ -77,9 +77,9 @@ Player
 	- Inputs should affect Animation & note pressing => send message
 	- Playable을 나눠놔야 나중에 multiplayer가능하지 않을까.
 
-_ Get Class Code
-_ Change to Mine
-_ Create Player Idle Animation
+v Get Class Code
+v Change to Mine
+v Create Player Idle Animation
 _ Add Animation for each input
 _ Get Stages for each Level
 _ Place Player 

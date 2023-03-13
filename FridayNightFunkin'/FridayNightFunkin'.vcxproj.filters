@@ -53,14 +53,14 @@
     <Filter Include="Engine\Component\Sprites\Animator">
       <UniqueIdentifier>{3c58dc06-9ff5-4884-96e5-87dc162bdbdb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Contents\Temp">
-      <UniqueIdentifier>{ea24189a-d55c-4f76-8b48-ae976cee4b96}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Contents\Scene">
       <UniqueIdentifier>{aedea299-4152-4572-a610-c429d256939e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Contents\Characters">
       <UniqueIdentifier>{44e46fb7-c7f5-4f5f-b1ea-2b1d166b6571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents\Background">
+      <UniqueIdentifier>{cb1d7920-32e3-4217-b6ef-fd4585aa826c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -148,26 +148,17 @@
     <ClInclude Include="LSprite.h">
       <Filter>Engine\Component\Sprites</Filter>
     </ClInclude>
-    <ClInclude Include="yaBaseBullet.h">
-      <Filter>Contents\Temp</Filter>
-    </ClInclude>
-    <ClInclude Include="yaCuphead.h">
-      <Filter>Contents\Temp</Filter>
-    </ClInclude>
-    <ClInclude Include="yaMonster.h">
-      <Filter>Contents\Temp</Filter>
-    </ClInclude>
-    <ClInclude Include="yaPlayeScene.h">
-      <Filter>Contents\Temp</Filter>
-    </ClInclude>
-    <ClInclude Include="yaTitleScene.h">
-      <Filter>Contents\Temp</Filter>
-    </ClInclude>
     <ClInclude Include="LBoyfriend.h">
       <Filter>Contents\Characters</Filter>
     </ClInclude>
     <ClInclude Include="LSinger.h">
       <Filter>Contents\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="LTutorialScene.h">
+      <Filter>Contents\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="LStageBG.h">
+      <Filter>Contents\Background</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -247,26 +238,17 @@
     <ClCompile Include="LSpriteRenderer.cpp">
       <Filter>Engine\Component\Sprites</Filter>
     </ClCompile>
-    <ClCompile Include="yaBaseBullet.cpp">
-      <Filter>Contents\Temp</Filter>
-    </ClCompile>
-    <ClCompile Include="yaCuphead.cpp">
-      <Filter>Contents\Temp</Filter>
-    </ClCompile>
-    <ClCompile Include="yaMonster.cpp">
-      <Filter>Contents\Temp</Filter>
-    </ClCompile>
-    <ClCompile Include="yaPlayeScene.cpp">
-      <Filter>Contents\Temp</Filter>
-    </ClCompile>
-    <ClCompile Include="yaTitleScene.cpp">
-      <Filter>Contents\Temp</Filter>
-    </ClCompile>
     <ClCompile Include="LBoyfriend.cpp">
       <Filter>Contents\Characters</Filter>
     </ClCompile>
     <ClCompile Include="LSinger.cpp">
       <Filter>Contents\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="LTutorialScene.cpp">
+      <Filter>Contents\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="LStageBG.cpp">
+      <Filter>Contents\Background</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

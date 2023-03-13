@@ -1,8 +1,7 @@
 #include "LSceneManager.h"
-#include "yaPlayeScene.h"
-#include "yaTitleScene.h"
 #include "LCollisionManager.h"
 #include "LCamera.h"
+#include "LTutorialScene.h"
 
 namespace fnf
 {	
@@ -13,10 +12,9 @@ namespace fnf
 
 	void SceneManager::Initialize()
 	{
-		mScenes.resize((UINT)eSceneType::End);
+		mScenes.resize((UINT)eSceneType::Size);
 
-		mScenes[(UINT)eSceneType::Title] = new TitleScene();
-		mScenes[(UINT)eSceneType::Play] = new PlayeScene();
+		mScenes[(UINT)eSceneType::Tutorial] = new TutorialScene();
 
 		for ( Scene* scene : mScenes )
 		{
@@ -26,7 +24,7 @@ namespace fnf
 			scene->Initialize();
 		}
 
-		mActiveScene = mScenes[(UINT)eSceneType::Title];
+		mActiveScene = mScenes[(UINT)eSceneType::Tutorial];
 	}
 
 	void SceneManager::Update()

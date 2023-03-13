@@ -39,4 +39,11 @@ namespace fnf
 		mImage = image;
 		mSprite = sp;
 	}
+
+	void SpriteRenderer::SetImage(const std::wstring& key, const std::wstring& path)
+	{
+		mImage = Resources::Load<Image>(key, path);
+		mSprite = mImage->GetFullImageSprite();
+	}
+
 }

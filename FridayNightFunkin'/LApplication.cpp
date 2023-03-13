@@ -4,6 +4,7 @@
 #include "LInput.h"
 #include "LCollisionManager.h"
 #include "LCamera.h"
+#include "LResources.h"
 
 namespace fnf
 {
@@ -23,8 +24,9 @@ namespace fnf
 	{
 		mHwnd = hWnd;
 		mHdc = GetDC(hWnd);
-		mWidth = 1600;
-		mHeight = 900;
+		mWidth = 1280;
+		mHeight = 720;
+		//(160:9)
 
 		RECT rect = { 0, 0, mWidth , mHeight };
 		AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, false);
@@ -76,6 +78,11 @@ namespace fnf
 		SceneManager::Render(mBackHDC);
 		
 		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHDC, 0, 0, SRCCOPY);
+	}
+	void Application::Release()
+	{
+		SceneManager::Release();
+		Resources::Release();
 	}
 	void Application::clear()
 	{

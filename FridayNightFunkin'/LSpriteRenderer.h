@@ -16,6 +16,7 @@ namespace fnf
 		virtual void Release() override;
 
 		void SetImage(Image* image, Sprite sp);
+		void SetImage(const std::wstring& key, const std::wstring& path);
 		void SetSprite(Sprite sprite) { mSprite = sprite; }
 		void SetOffset(Vector2 offset) { mOffset = offset; }
 	private:
