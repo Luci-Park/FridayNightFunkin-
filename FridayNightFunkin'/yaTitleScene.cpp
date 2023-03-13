@@ -7,7 +7,7 @@
 #include "LTransform.h"
 #include "LCamera.h"
 #include "LObject.h"
-
+#include "LBoyFriend.h"
 namespace fnf
 {
 	TitleScene::TitleScene()
@@ -22,6 +22,7 @@ namespace fnf
 
 		object::Instantiate<Cuphead>(eLayerType::Player);
 		object::Instantiate<Monster>(eLayerType::Monster);
+		object::Instantiate<Boyfriend>(eLayerType::Player);
 	}
 	void TitleScene::Update()
 	{
