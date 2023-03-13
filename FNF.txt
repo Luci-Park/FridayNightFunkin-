@@ -76,3 +76,34 @@ Player
 		- animation speed is affected by bpm
 	- Inputs should affect Animation & note pressing => send message
 	- Playable을 나눠놔야 나중에 multiplayer가능하지 않을까.
+
+_ Get Class Code
+_ Change to Mine
+_ Create Player Idle Animation
+_ Add Animation for each input
+_ Get Stages for each Level
+_ Place Player 
+_ Create GirlFriend and Animation for tutorial
+_ Place GirlFriend
+_ Add Notes
+_ Make Notes come up in some timing
+_ Add Collisions for Notes
+_ Makes notes disappear according to Inputs
+_ Add effects(note splash, compliments) according to Inputs
+_ Add scores and Stuff(Score Manager)
+_ Make notes and Moves move by reading .json files.
+_ Create Dad Animation
+_ Make week 1
+_ Create Week2 lightning
+_ Create Week2 Monsters
+_ Create Pico
+_ Create Week3 
+_ Create AI
+_ Make Pause Menu
+	_ Restart
+	_ Toggle AI
+	_ Exit to Menu
+_ Create Campaign Menu
+	- Character Animation
+	- Buttons
+	- Name, others.
