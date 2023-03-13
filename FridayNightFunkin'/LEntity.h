@@ -1,5 +1,6 @@
 #pragma once
 #include "LuciEngine.h"
+
 namespace fnf
 {
 	class Entity
@@ -10,7 +11,7 @@ namespace fnf
 
 		void SetName(const std::wstring& name) { mName = name; }
 		std::wstring& GetName() { return mName; }
-		void SetID(UINT64 id) { mID = id;}
+		void SetID(UINT64 id) { mID = id; }
 		UINT64 GetID() { return mID; }
 
 	private:
@@ -18,4 +19,3 @@ namespace fnf
 		UINT64 mID;
 	};
 }
-

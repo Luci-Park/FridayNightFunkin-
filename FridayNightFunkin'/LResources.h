@@ -1,7 +1,9 @@
 #pragma once
 #include "LResource.h"
+
 namespace fnf
 {
+	
 	class Resources
 	{
 	public:
@@ -9,11 +11,12 @@ namespace fnf
 		static T* Find(const std::wstring& key)
 		{
 			std::map<std::wstring, Resource*>::iterator iter = mResources.find(key);
-
-			if (iter != mResources.end())
+if (iter != mResources.end())
 			{
 				return dynamic_cast<T*>(iter->second);
 			}
+
+
 			return nullptr;
 		}
 
@@ -48,7 +51,7 @@ namespace fnf
 
 		static void Release()
 		{
-			for (auto pair : mResources)
+			for (auto pair: mResources)
 			{
 				delete pair.second;
 				pair.second = nullptr;

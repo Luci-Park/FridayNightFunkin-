@@ -1,32 +1,47 @@
 #include "LSceneManager.h"
-#include "LSceneHeaders.h"
+#include "yaPlayeScene.h"
+#include "yaTitleScene.h"
+#include "LCollisionManager.h"
+#include "LCamera.h"
+
 namespace fnf
-{
+{	
+	//SceneManager scsene;
+	//SceneManager* scsene = new SceneManager();
 	std::vector<Scene*> SceneManager::mScenes = {};
 	Scene* SceneManager::mActiveScene = nullptr;
+
 	void SceneManager::Initialize()
 	{
-		mScenes.resize((UINT)eSceneType::SIZE);
-		SetScenes();
-		for (Scene* scene : mScenes)
+		mScenes.resize((UINT)eSceneType::End);
+
+		mScenes[(UINT)eSceneType::Title] = new TitleScene();
+		mScenes[(UINT)eSceneType::Play] = new PlayeScene();
+
+		for ( Scene* scene : mScenes )
 		{
 			if (scene == nullptr)
 				continue;
+
 			scene->Initialize();
 		}
-		LoadScene(eSceneType::Splash);
+
+		mActiveScene = mScenes[(UINT)eSceneType::Title];
 	}
 
 	void SceneManager::Update()
 	{
-		if(mActiveScene != nullptr)
-			mActiveScene->Update();
+		mActiveScene->Update();
 	}
 
 	void SceneManager::Render(HDC hdc)
 	{
-		if (mActiveScene != nullptr)
-			mActiveScene->Render(hdc);
+		mActiveScene->Render(hdc);
+	}
+
+	void SceneManager::Destroy()
+	{
+		mActiveScene->Destroy();
 	}
 
 	void SceneManager::Release()
@@ -36,33 +51,23 @@ namespace fnf
 			if (scene == nullptr)
 				continue;
 
-			scene->Release();
 			delete scene;
 			scene = nullptr;
 		}
 	}
+
 	void SceneManager::LoadScene(eSceneType type)
 	{
-		if (mActiveScene != nullptr)
-			mActiveScene->OnExit();
+		Camera::Clear();
+
+		// �����
+		mActiveScene->OnExit();
+		
+		CollisionManager::Clear();
+		//������
 		mActiveScene = mScenes[(UINT)type];
 		mActiveScene->OnEnter();
-	}
-	void SceneManager::GetNextScene(eSceneType type)
-	{
-		eSceneType nextType = (eSceneType)(((UINT)type + 1) % (UINT)eSceneType::SIZE);
-		LoadScene(nextType);
-	}
-	void SceneManager::SetScenes()
-	{
-		mScenes[(UINT)eSceneType::Splash] = new SplashScene();
-		mScenes[(UINT)eSceneType::Title] = new TitleScene();
-		mScenes[(UINT)eSceneType::Options] = new OptionsScene();
-		mScenes[(UINT)eSceneType::StoryMode] = new StoryModeScene();
-		mScenes[(UINT)eSceneType::Tutorial] = new TutorialScene();
-		mScenes[(UINT)eSceneType::Week1] = new Week1Scene();
-		mScenes[(UINT)eSceneType::Week2] = new Week2Scene();
-		mScenes[(UINT)eSceneType::Week3] = new Week3Scene();
-		mScenes[(UINT)eSceneType::Week4] = new Week4Scene();
+
+		
 	}
 }

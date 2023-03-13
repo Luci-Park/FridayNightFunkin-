@@ -1,5 +1,6 @@
 #pragma once
 #include "LEntity.h"
+
 namespace fnf
 {
 	class Image;
@@ -7,7 +8,7 @@ namespace fnf
 	class Animation : public Entity
 	{
 	public:
-		struct Sprite//frame
+		struct Sprite
 		{
 			Vector2 leftTop;
 			Vector2 size;
@@ -23,25 +24,28 @@ namespace fnf
 
 			}
 		};
+
 		Animation();
 		~Animation();
 
 		void Initialize();
 		void Update();
 		void Render(HDC hdc);
-		void Create(Image* sheet, Vector2 leftTop, UINT column, UINT row, UINT spriteLength, Vector2 offset, float duration);
+		void Create(Image* sheet, Vector2 leftTop, UINT coulmn, UINT row, UINT spriteLength, Vector2 offset, float duration);
 		void Reset();
 
 		bool IsComplete() { return mbComplete; }
 		void SetAnimator(Animator* animator) { mAnimator = animator; }
-				
+		void SetAnimationName(const std::wstring& name) { mAnimationName = name; }
+		std::wstring& GetAnimationName() { return mAnimationName; }
+
 	private:
 		Animator* mAnimator;
-		Image* mSpriteSheet;
-		std::vector<Sprite>mFrames;
-		float mTimer;
+		Image* mSheetImage;
+		std::vector<Sprite> mSpriteSheet;
+		std::wstring mAnimationName;
+		float mTime;
 		bool mbComplete;
-		int mFrameNum;
-
+		int mSpriteIndex;
 	};
 }

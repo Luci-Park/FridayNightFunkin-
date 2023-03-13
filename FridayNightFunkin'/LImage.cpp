@@ -1,29 +1,31 @@
 #include "LImage.h"
 #include "LApplication.h"
 #include "LResources.h"
-#include <wincodec.h>
+
 extern fnf::Application application;
+
 namespace fnf
 {
-	//const std::wstring Image::defaultPath = L"..\\FNFAssets\\Art\\24Bit\\";
-	Image* Image::CreateEmptyImage(const std::wstring& name, UINT width, UINT height)
+	Image* Image::Create(const std::wstring& name, UINT widht, UINT height)
 	{
-		if (width == 0 || height == 0)
+		if (widht == 0 || height == 0)
 			return nullptr;
+
 		Image* image = Resources::Find<Image>(name);
 		if (image != nullptr)
 			return image;
+
 		image = new Image();
-		HDC mainHDC = application.GetHdc();
+		HDC mainHdc = application.GetHdc();
 
-		image->mBitmap = CreateCompatibleBitmap(mainHDC, width, height);
-
-		image->mHdc = CreateCompatibleDC(mainHDC);
+		image->mBitmap = CreateCompatibleBitmap(mainHdc, widht, height);
+		
+		image->mHdc = CreateCompatibleDC(mainHdc);
 
 		HBITMAP oldBitmap = (HBITMAP)SelectObject(image->mHdc, image->mBitmap);
 		DeleteObject(oldBitmap);
 
-		image->mWidth = width;
+		image->mWidth = widht;
 		image->mHeight = height;
 
 		image->SetKey(name);
@@ -34,15 +36,20 @@ namespace fnf
 		return image;
 	}
 	Image::Image()
-		:mBitmap(NULL)
-		,mHdc(NULL)
-		,mWidth(0)
-		,mHeight(0)
+		: mBitmap(NULL)
+		, mHdc(NULL)
+		, mWidth(0)
+		, mHeight(0)
 	{
+
+
 	}
+
 	Image::~Image()
 	{
+
 	}
+
 	HRESULT Image::Load(const std::wstring& path)
 	{
 		mBitmap = (HBITMAP)LoadImageW(nullptr

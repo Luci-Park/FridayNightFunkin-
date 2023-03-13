@@ -1,12 +1,19 @@
 #pragma once
 #include "LEntity.h"
 #include "LComponent.h"
-#include "LTransform.h"
+
 namespace fnf
 {
 	class GameObject : public Entity
 	{
 	public:
+		enum class eState
+		{
+			Active,
+			Pause,
+			Death,
+		};
+
 		GameObject();
 		virtual ~GameObject();
 
@@ -15,12 +22,13 @@ namespace fnf
 		virtual void Render(HDC hdc);
 		virtual void Release();
 
-		template<typename T>
+		virtual void OnCollisionEnter(class Collider* other);
+		virtual void OnCollisionStay(class Collider* other);
+		virtual void OnCollisionExit(class Collider* other);
+
+		template <typename T>
 		T* AddComponent()
 		{
-			T* check = GetComponent<T>();
-			if (check != nullptr)
-				return check;
 			T* comp = new T();
 			UINT compType = (UINT)comp->GetType();
 			mComponents[compType] = comp;
@@ -29,7 +37,7 @@ namespace fnf
 			return comp;
 		}
 
-		template<typename T>
+		template <typename T>
 		T* GetComponent()
 		{
 			for (Component* comp : mComponents)
@@ -37,15 +45,16 @@ namespace fnf
 				if (dynamic_cast<T*>(comp))
 					return dynamic_cast<T*>(comp);
 			}
+
 			return nullptr;
 		}
 		
-		Transform* GetTransform() { return mTransform; }
-	protected:
-		Transform* mTransform;
+		eState GetState() { return mState; }
+		void SetState(eState state) { mState = state; }
+
 
 	private:
 		std::vector<Component*> mComponents;
+		eState mState;
 	};
 }
-

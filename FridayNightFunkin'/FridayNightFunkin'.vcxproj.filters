@@ -5,79 +5,130 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Main">
-      <UniqueIdentifier>{a1dab0df-ce36-40d0-9fcc-930081bdbded}</UniqueIdentifier>
+    <Filter Include="Contents">
+      <UniqueIdentifier>{e2e189a4-7170-444c-9f0b-2ff3312027c8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine">
-      <UniqueIdentifier>{bd416fc4-08c7-4268-9bc7-21cbcbb16162}</UniqueIdentifier>
+      <UniqueIdentifier>{e1efb817-e854-48a5-a0ef-3fb32e8f717e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Camera">
+      <UniqueIdentifier>{d1b11abc-e6bd-4915-ba37-c8d9c5b2504f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Common">
-      <UniqueIdentifier>{8e13472a-a9df-49e3-8b4b-93a0ac00bb48}</UniqueIdentifier>
+      <UniqueIdentifier>{b58a90b1-47d7-41d5-99a5-1f0dba8d74ee}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Component">
-      <UniqueIdentifier>{c6093a0a-98b8-4423-9a6d-dde78239b739}</UniqueIdentifier>
+      <UniqueIdentifier>{af8cb290-fd56-4e3b-baf7-b66936e423fb}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\GameObject">
-      <UniqueIdentifier>{d746dd42-f1c0-45fe-a203-e3d67b1e3066}</UniqueIdentifier>
+      <UniqueIdentifier>{f760c9a3-45fa-4b3b-b74c-73b4eb0372eb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\High Level Interface">
-      <UniqueIdentifier>{88f24d54-eb99-4274-8d1f-0af8cefd1019}</UniqueIdentifier>
+    <Filter Include="main">
+      <UniqueIdentifier>{a1dab0df-ce36-40d0-9fcc-930081bdbded}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Input">
-      <UniqueIdentifier>{f736334f-3451-471e-b053-fa73faafd9f4}</UniqueIdentifier>
+      <UniqueIdentifier>{259024a1-32f9-4e99-9072-9b7152d0838f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Layer">
-      <UniqueIdentifier>{c1cf4dd7-c43f-4d2a-ba8c-a2fc05a38b31}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Scene">
-      <UniqueIdentifier>{430cb763-75c8-4c8c-8428-2fb1e7fdb7e0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Time">
-      <UniqueIdentifier>{c6450542-807c-4c46-aa36-6667c2093cb1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Contents">
-      <UniqueIdentifier>{6ed4d9b1-a6a6-4ff8-8f3e-847e7d15f73c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Contents\Scene">
-      <UniqueIdentifier>{93691678-c80c-489c-959f-049748637b23}</UniqueIdentifier>
+      <UniqueIdentifier>{301c7abb-3c62-4541-9287-bdc7057385b8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Resource">
-      <UniqueIdentifier>{46453165-0c59-429c-8fd0-21279e2c1db3}</UniqueIdentifier>
+      <UniqueIdentifier>{144fe912-9cbb-45f6-bfdb-94880424d955}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Contents\Background">
-      <UniqueIdentifier>{a1a9b247-87ef-4b1d-9cd1-bc3f726d5705}</UniqueIdentifier>
+    <Filter Include="Engine\Scene">
+      <UniqueIdentifier>{729491c6-c5ba-4952-b55c-c52dcc6c5b1a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Contents\Singers">
-      <UniqueIdentifier>{d8603954-e5f7-437d-95db-81fa91991d6c}</UniqueIdentifier>
+    <Filter Include="Engine\Time">
+      <UniqueIdentifier>{6f85fd96-c60d-4bdc-b864-92b0d2d65c24}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Contents\Singers\Opponents">
-      <UniqueIdentifier>{8b1fff38-bdc1-4a6d-bf01-8dc44f49c86c}</UniqueIdentifier>
+    <Filter Include="Engine\High Level Interface">
+      <UniqueIdentifier>{71bb8d76-4cde-4532-83dd-df93392e392b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Contents\Singers\Player">
-      <UniqueIdentifier>{93686333-b91b-4d73-acd0-fc350f37c06b}</UniqueIdentifier>
+    <Filter Include="Engine\Component\Animator">
+      <UniqueIdentifier>{3c58dc06-9ff5-4884-96e5-87dc162bdbdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Component\Collider">
+      <UniqueIdentifier>{e99e21d2-0269-408a-a9ca-62a09ef5e2ad}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FridayNightFunkin%27.h">
-      <Filter>Main</Filter>
+      <Filter>main</Filter>
     </ClInclude>
-    <ClInclude Include="CommonInclude.h">
-      <Filter>Engine\Common</Filter>
+    <ClInclude Include="framework.h">
+      <Filter>main</Filter>
     </ClInclude>
-    <ClInclude Include="LuciEngine.h">
-      <Filter>Engine\Common</Filter>
+    <ClInclude Include="targetver.h">
+      <Filter>main</Filter>
     </ClInclude>
-    <ClInclude Include="LMath.h">
+    <ClInclude Include="Resource.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="LApplication.h">
+      <Filter>Engine\High Level Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="LCamera.h">
+      <Filter>Engine\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="yaBaseBullet.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="LCollider.h">
+      <Filter>Engine\Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="LAnimation.h">
+      <Filter>Engine\Component\Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="LAnimator.h">
+      <Filter>Engine\Component\Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="LCollisionManager.h">
+      <Filter>Engine\Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="LComponent.h">
+      <Filter>Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="yaCuphead.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="LEntity.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
     <ClInclude Include="LEnums.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="LEntity.h">
+    <ClInclude Include="LGameObject.h">
+      <Filter>Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="LImage.h">
+      <Filter>Engine\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="LInput.h">
+      <Filter>Engine\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="LLayer.h">
+      <Filter>Engine\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="LMath.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
-    <ClInclude Include="LApplication.h">
-      <Filter>Engine\High Level Interface</Filter>
+    <ClInclude Include="LuciEngine.h">
+      <Filter>Engine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="yaMonster.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="LObject.h">
+      <Filter>Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="yaPlayeScene.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="LResource.h">
+      <Filter>Engine\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="LResources.h">
+      <Filter>Engine\Resource</Filter>
     </ClInclude>
     <ClInclude Include="LScene.h">
       <Filter>Engine\Scene</Filter>
@@ -88,86 +139,11 @@
     <ClInclude Include="LTime.h">
       <Filter>Engine\Time</Filter>
     </ClInclude>
-    <ClInclude Include="LLayer.h">
-      <Filter>Engine\Layer</Filter>
-    </ClInclude>
-    <ClInclude Include="LGameObject.h">
-      <Filter>Engine\GameObject</Filter>
-    </ClInclude>
-    <ClInclude Include="LComponent.h">
-      <Filter>Engine\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="LInput.h">
-      <Filter>Engine\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="LResource.h">
-      <Filter>Engine\Resource</Filter>
-    </ClInclude>
-    <ClInclude Include="LResources.h">
-      <Filter>Engine\Resource</Filter>
-    </ClInclude>
-    <ClInclude Include="LImage.h">
-      <Filter>Engine\Resource</Filter>
-    </ClInclude>
-    <ClInclude Include="framework.h">
-      <Filter>Main</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Main</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Main</Filter>
-    </ClInclude>
-    <ClInclude Include="LWeek4Scene.h">
-      <Filter>Contents\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="LOptionsScene.h">
-      <Filter>Contents\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="LSplashScene.h">
-      <Filter>Contents\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="LStoryModeScene.h">
-      <Filter>Contents\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="LTitleScene.h">
-      <Filter>Contents\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="LTutorialScene.h">
-      <Filter>Contents\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="LWeek1Scene.h">
-      <Filter>Contents\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="LWeek3Scene.h">
-      <Filter>Contents\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="LWeek2Scene.h">
-      <Filter>Contents\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="LStageBg.h">
-      <Filter>Contents\Background</Filter>
-    </ClInclude>
-    <ClInclude Include="LSceneHeaders.h">
-      <Filter>Engine\Scene</Filter>
-    </ClInclude>
     <ClInclude Include="LTransform.h">
       <Filter>Engine\Component</Filter>
     </ClInclude>
-    <ClInclude Include="LColorBlock.h">
-      <Filter>Contents\Background</Filter>
-    </ClInclude>
-    <ClInclude Include="LAnimation.h">
-      <Filter>Engine\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="LAnimator.h">
-      <Filter>Engine\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="LSpriteRenderer.h">
-      <Filter>Engine\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="LBoyFriend.h">
-      <Filter>Contents\Singers\Player</Filter>
+    <ClInclude Include="yaTitleScene.h">
+      <Filter>Contents</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -185,13 +161,64 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Main</Filter>
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="LApplication.cpp">
+      <Filter>Engine\High Level Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="LCamera.cpp">
+      <Filter>Engine\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="yaBaseBullet.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="LCollider.cpp">
+      <Filter>Engine\Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="LAnimation.cpp">
+      <Filter>Engine\Component\Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="LAnimator.cpp">
+      <Filter>Engine\Component\Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="LCollisionManager.cpp">
+      <Filter>Engine\Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="LComponent.cpp">
+      <Filter>Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="yaCuphead.cpp">
+      <Filter>Contents</Filter>
     </ClCompile>
     <ClCompile Include="LEntity.cpp">
       <Filter>Engine\Common</Filter>
     </ClCompile>
-    <ClCompile Include="LApplication.cpp">
-      <Filter>Engine\High Level Interface</Filter>
+    <ClCompile Include="LGameObject.cpp">
+      <Filter>Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="LImage.cpp">
+      <Filter>Engine\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="LInput.cpp">
+      <Filter>Engine\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="LLayer.cpp">
+      <Filter>Engine\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="LMath.cpp">
+      <Filter>Engine\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="yaMonster.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="yaPlayeScene.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="LResource.cpp">
+      <Filter>Engine\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="LResources.cpp">
+      <Filter>Engine\Resource</Filter>
     </ClCompile>
     <ClCompile Include="LScene.cpp">
       <Filter>Engine\Scene</Filter>
@@ -202,77 +229,11 @@
     <ClCompile Include="LTime.cpp">
       <Filter>Engine\Time</Filter>
     </ClCompile>
-    <ClCompile Include="LLayer.cpp">
-      <Filter>Engine\Layer</Filter>
-    </ClCompile>
-    <ClCompile Include="LGameObject.cpp">
-      <Filter>Engine\GameObject</Filter>
-    </ClCompile>
-    <ClCompile Include="LComponent.cpp">
-      <Filter>Engine\Component</Filter>
-    </ClCompile>
-    <ClCompile Include="LInput.cpp">
-      <Filter>Engine\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="LResource.cpp">
-      <Filter>Engine\Resource</Filter>
-    </ClCompile>
-    <ClCompile Include="LResources.cpp">
-      <Filter>Engine\Resource</Filter>
-    </ClCompile>
-    <ClCompile Include="LImage.cpp">
-      <Filter>Engine\Resource</Filter>
-    </ClCompile>
-    <ClCompile Include="LOptionsScene.cpp">
-      <Filter>Contents\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="LSplashScene.cpp">
-      <Filter>Contents\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="LStoryModeScene.cpp">
-      <Filter>Contents\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="LTitleScene.cpp">
-      <Filter>Contents\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="LTutorialScene.cpp">
-      <Filter>Contents\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="LWeek1Scene.cpp">
-      <Filter>Contents\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="LWeek3Scene.cpp">
-      <Filter>Contents\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="LWeek4Scene.cpp">
-      <Filter>Contents\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="LWeek2Scene.cpp">
-      <Filter>Contents\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="LStageBg.cpp">
-      <Filter>Contents\Background</Filter>
-    </ClCompile>
     <ClCompile Include="LTransform.cpp">
       <Filter>Engine\Component</Filter>
     </ClCompile>
-    <ClCompile Include="LColorBlock.cpp">
-      <Filter>Contents\Background</Filter>
-    </ClCompile>
-    <ClCompile Include="LAnimation.cpp">
-      <Filter>Engine\Component</Filter>
-    </ClCompile>
-    <ClCompile Include="LAnimator.cpp">
-      <Filter>Engine\Component</Filter>
-    </ClCompile>
-    <ClCompile Include="LSpriteRenderer.cpp">
-      <Filter>Engine\Component</Filter>
-    </ClCompile>
-    <ClCompile Include="LMath.cpp">
-      <Filter>Engine\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="LBoyFriend.cpp">
-      <Filter>Contents\Singers\Player</Filter>
+    <ClCompile Include="yaTitleScene.cpp">
+      <Filter>Contents</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

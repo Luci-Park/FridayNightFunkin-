@@ -1,27 +1,28 @@
 #pragma once
 #include "LEntity.h"
 #include "LLayer.h"
+
 namespace fnf
 {
 	class Scene : public Entity
 	{
 	public:
-		Scene(std::wstring sceneName, eSceneType type);
+		Scene();
 		virtual ~Scene();
-
+		
 		virtual void Initialize();
 		virtual void Update();
 		virtual void Render(HDC hdc);
+		virtual void Destroy();
 		virtual void Release();
 
 		virtual void OnEnter();
 		virtual void OnExit();
 
-		void AddGameObject(GameObject* obj, eLayerType layer);
+		void AddGameObeject(GameObject* obj, eLayerType layer);
+		std::vector<GameObject*>& GetGameObjects(eLayerType layer);
 
-	protected:
-		eSceneType mSceneType;
+	private:
 		std::vector<Layer> mLayers;
 	};
 }
-

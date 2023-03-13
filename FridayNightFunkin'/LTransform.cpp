@@ -1,9 +1,12 @@
 #include "LTransform.h"
+
+
 namespace fnf
 {
 	Transform::Transform()
-		:Component(eComponentType::Transform),
-		mPos(Vector2::Zero), mScale(Vector2::One)
+		:Component(eComponentType::Transform)
+		, mPos(Vector2::Zero)
+		, mScale(Vector2::One)
 	{
 	}
 	Transform::~Transform()

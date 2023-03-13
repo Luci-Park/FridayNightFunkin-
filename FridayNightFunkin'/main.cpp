@@ -4,6 +4,8 @@
 #include "framework.h"
 #include "FridayNightFunkin'.h"
 #include "LApplication.h"
+#include "LSceneManager.h"
+#include "LResources.h"
 
 #define MAX_LOADSTRING 100
 
@@ -66,7 +68,9 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         }
     }
 
-    application.Release();
+    fnf::SceneManager::Release();
+    fnf::Resources::Release();
+
     return (int) msg.wParam;
 }
 

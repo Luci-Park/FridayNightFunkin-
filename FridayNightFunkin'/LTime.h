@@ -1,5 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
+
 namespace fnf
 {
 	class Time
@@ -10,7 +11,6 @@ namespace fnf
 		static void Render(HDC hdc);
 
 		__forceinline static double DeltaTime() { return mDeltaTime; }
-		__forceinline static float FPS() { return mfps; }
 
 	private:
 		static double mDeltaTime;
@@ -18,7 +18,5 @@ namespace fnf
 		static LARGE_INTEGER mCpuFrequency;
 		static LARGE_INTEGER mPrevFrequency;
 		static LARGE_INTEGER mCurFrequency;
-		static float mfps;
 	};
 }
-

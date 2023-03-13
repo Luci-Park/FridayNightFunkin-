@@ -1,14 +1,15 @@
 #include "LAnimator.h"
 #include "LResources.h"
-#include "LImage.h"
+
 namespace fnf
 {
 	Animator::Animator()
-		:Component(eComponentType::Animator),
-		mActiveAnimation(nullptr),
-		mbLoop(false)
-
+		: Component(eComponentType::Animator)
+		, mActiveAnimation(nullptr)
+		, mSpriteSheet(nullptr)
+		, mbLoop(false)
 	{
+
 	}
 	Animator::~Animator()
 	{
@@ -54,19 +55,27 @@ namespace fnf
 	void Animator::Release()
 	{
 	}
-	void Animator::CreateAnimation(const std::wstring& name, Image* sheet, Vector2 leftTop, UINT column, UINT row, UINT spriteLength, Vector2 offset, float duration)
+	void Animator::CreateAnimation(const std::wstring& name
+		, Image* sheet, Vector2 leftTop
+		, UINT coulmn, UINT row, UINT spriteLength
+		, Vector2 offset, float duration)
 	{
 		Animation* animation = FindAnimation(name);
-		if (animation != nullptr) return;
+
+		if (animation != nullptr)
+			return;
+
 		animation = new Animation();
-		animation->Create(sheet, leftTop, column, row, spriteLength, offset, duration);
-		animation->SetName(name);
+		animation->Create(sheet, leftTop, coulmn, row, spriteLength, offset, duration);
+		animation->SetAnimationName(name);
 		animation->SetAnimator(this);
 
 		mAnimations.insert(std::make_pair(name, animation));
+		Events* event = new Events();
+		mEvents.insert(std::make_pair(name, event));
 	}
 
-	void Animator::CreateAnimations(const std::wstring& path, const std::wstring& name, Vector2 offset, float duration)
+	void Animator::CreateAnimations(const std::wstring& path, Vector2 offset, float duration)
 	{
 		UINT width = 0;
 		UINT height = 0;
@@ -97,7 +106,9 @@ namespace fnf
 			fileCount++;
 		}
 
-		Image* mSpriteSheet = Image::CreateEmptyImage(name, width * fileCount, height);
+		std::wstring key = fs.parent_path().filename();
+		key += fs.filename();
+		mSpriteSheet = Image::Create(key, width * fileCount, height);
 
 		//
 		int index = 0;
@@ -115,7 +126,7 @@ namespace fnf
 			index++;
 		}
 
-		CreateAnimation(name, mSpriteSheet, Vector2::Zero, index, 1, index, offset, duration);
+		CreateAnimation(key, mSpriteSheet, Vector2::Zero, index, 1, index, offset, duration);
 	}
 
 	Animation* Animator::FindAnimation(const std::wstring& name)
@@ -166,7 +177,7 @@ namespace fnf
 		Animation* animation = FindAnimation(name);
 
 		Animator::Events* events
-			= FindEvents(animation->GetName());
+			= FindEvents(animation->GetAnimationName());
 
 		return events->mStartEvent.mEvent;
 	}
@@ -175,7 +186,7 @@ namespace fnf
 		Animation* animation = FindAnimation(name);
 
 		Animator::Events* events
-			= FindEvents(animation->GetName());
+			= FindEvents(animation->GetAnimationName());
 
 		return events->mCompleteEvent.mEvent;
 	}
@@ -184,7 +195,7 @@ namespace fnf
 		Animation* animation = FindAnimation(name);
 
 		Animator::Events* events
-			= FindEvents(animation->GetName());
+			= FindEvents(animation->GetAnimationName());
 
 		return events->mEndEvent.mEvent;
 	}

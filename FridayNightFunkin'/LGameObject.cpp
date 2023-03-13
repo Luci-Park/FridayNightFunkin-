@@ -1,13 +1,22 @@
 #include "LGameObject.h"
+#include "LTransform.h"
+
 namespace fnf
 {
 	GameObject::GameObject()
+		: mState(eState::Active)
 	{
-		mComponents.resize((UINT)eComponentType::SIZE);
-		mTransform = AddComponent<Transform>();
+		mComponents.resize((UINT)eComponentType::End);
+		AddComponent<Transform>();
 	}
+
 	GameObject::~GameObject()
 	{
+		for (Component* comp : mComponents)
+		{
+			delete comp;
+			comp = nullptr;
+		}
 	}
 
 	void GameObject::Initialize()
@@ -16,15 +25,18 @@ namespace fnf
 		{
 			if (comp == nullptr)
 				continue;
+
 			comp->Initialize();
 		}
 	}
+
 	void GameObject::Update()
 	{
 		for (Component* comp : mComponents)
 		{
 			if (comp == nullptr)
 				continue;
+
 			comp->Update();
 		}
 	}
@@ -42,14 +54,15 @@ namespace fnf
 
 	void GameObject::Release()
 	{
-		for (Component* comp : mComponents)
-		{
-			if (comp == nullptr)
-				continue;
 
-			comp->Release();
-			delete comp;
-			comp = nullptr;
-		}
+	}
+	void GameObject::OnCollisionEnter(Collider* other)
+	{
+	}
+	void GameObject::OnCollisionStay(Collider* other)
+	{
+	}
+	void GameObject::OnCollisionExit(Collider* other)
+	{
 	}
 }

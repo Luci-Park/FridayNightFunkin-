@@ -1,4 +1,6 @@
 #include "LLayer.h"
+
+
 namespace fnf
 {
 	Layer::Layer()
@@ -6,6 +8,11 @@ namespace fnf
 	}
 	Layer::~Layer()
 	{
+		for (GameObject* gameObj : mGameObjects)
+		{
+			delete gameObj;
+			gameObj = nullptr;
+		}
 	}
 	void Layer::Initialize()
 	{
@@ -13,6 +20,11 @@ namespace fnf
 		{
 			if (gameObj == nullptr)
 				continue;
+
+			if (gameObj->GetState() 
+				!= GameObject::eState::Active)
+				continue;
+
 			gameObj->Initialize();
 		}
 	}
@@ -22,6 +34,11 @@ namespace fnf
 		{
 			if (gameObj == nullptr)
 				continue;
+
+			if (gameObj->GetState()
+				!= GameObject::eState::Active)
+				continue;
+
 			gameObj->Update();
 		}
 	}
@@ -31,20 +48,17 @@ namespace fnf
 		{
 			if (gameObj == nullptr)
 				continue;
+
+			if (gameObj->GetState()
+				!= GameObject::eState::Active)
+				continue;
+
 			gameObj->Render(hdc);
 		}
 	}
 	void Layer::Release()
 	{
-		for (GameObject* gameObj : mGameObjects)
-		{
-			if (gameObj == nullptr)
-				continue;
 
-			gameObj->Release();
-			delete gameObj;
-			gameObj = nullptr;
-		}
 	}
 	void Layer::AddGameObject(GameObject* gameObj)
 	{

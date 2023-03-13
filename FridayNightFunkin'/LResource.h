@@ -1,5 +1,6 @@
-﻿#pragma once
+#pragma once
 #include "LEntity.h"
+
 namespace fnf
 {
 	class Resource
@@ -19,4 +20,15 @@ namespace fnf
 		std::wstring mKey;
 		std::wstring mPath;
 	};
+
+	
+	//class Image : public Resource
+	//{
+			
+	//};
+
+	//class Sound : public Resource
+	//{
+
+	//};
 }

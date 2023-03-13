@@ -1,5 +1,6 @@
 #pragma once
 #include "LEntity.h"
+
 namespace fnf
 {
 	class GameObject;
@@ -7,7 +8,7 @@ namespace fnf
 	{
 	public:
 		Component(eComponentType type);
-		virtual ~Component();
+		~Component();
 
 		virtual void Initialize();
 		virtual void Update();
@@ -17,9 +18,9 @@ namespace fnf
 		eComponentType GetType() { return mType; }
 		void SetOwner(GameObject* owner) { mOwner = owner; }
 		GameObject* GetOwner() { return mOwner; }
+
 	private:
 		const eComponentType mType;
 		GameObject* mOwner;
 	};
 }
-

@@ -1,5 +1,7 @@
 #pragma once
 #include "LuciEngine.h"
+
+
 namespace fnf
 {
 	class Application
@@ -12,21 +14,19 @@ namespace fnf
 		void Run();
 		void Update();
 		void Render();
-		void Release();		
-		Vector2 GetScreenCenter();
 
-		HWND GetHWnd() { return mHwnd; }
+		HWND GetHwnd() { return mHwnd; }
 		HDC GetHdc() { return mHdc; }
-		UINT GetScreenWidth() { return mWidth; }
-		UINT GetScreenHeight() { return mHeight; }
+		UINT GetWidth() { return mWidth; }
+		UINT GetHeight() { return mHeight; }
 
 	private:
-		void SetTitle();
-		void ClearScreen();
+		void clear();
+
 	private:
 		HWND mHwnd;
 		HDC mHdc;
-
+		
 		HBITMAP mBackBuffer;
 		HDC mBackHDC;
 
@@ -36,4 +36,3 @@ namespace fnf
 		Vector2 mPos;
 	};
 }
-

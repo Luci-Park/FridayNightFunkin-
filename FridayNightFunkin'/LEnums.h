@@ -1,31 +1,25 @@
 #pragma once
+
+
 enum class eSceneType
 {
-	Splash,
 	Title,
-	Options,
-	StoryMode,
-	Tutorial,
-	Week1,
-	Week2,
-	Week3,
-	Week4,
-	SIZE
+	Play,
+	Ending,
+	End,
 };
-
 
 enum class eLayerType
 {
-	Background,
-	BackgroundCharacters,
-	Player1,
-	Player2,
-	Notes,
-	Particles,
+	BG,
+	Monster,
+	Player,
+	Bullet,
+	Test,
+	Effect,
 	UI,
-	SIZE = 16
+	End = 16,
 };
-
 
 enum class eComponentType
 {
@@ -34,5 +28,5 @@ enum class eComponentType
 	Animator,
 	Collider,
 	Audio,
-	SIZE
+	End,
 };
