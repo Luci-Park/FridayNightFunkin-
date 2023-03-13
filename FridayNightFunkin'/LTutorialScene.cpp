@@ -12,8 +12,8 @@ namespace fnf
 	}
 	void TutorialScene::Initialize()
 	{
-		bf = object::Instantiate<Boyfriend>(eLayerType::Player);
-		object::Instantiate<StageBG>(eLayerType::BG);
+		bf = object::Instantiate<Boyfriend>(this, eLayerType::Player);
+		object::Instantiate<StageBG>(this, eLayerType::BG);
 		Scene::Initialize();
 	}
 	void TutorialScene::Update()

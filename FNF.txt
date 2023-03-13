@@ -77,12 +77,14 @@ Player
 	- Inputs should affect Animation & note pressing => send message
 	- Playable을 나눠놔야 나중에 multiplayer가능하지 않을까.
 
-v Get Class Code
-v Change to Mine
-v Create Player Idle Animation
+3/13 Get Class Code
+3/13 Change to Mine
+3/13 Create Player Idle Animation
 _ Add Animation for each input
 _ Get Stages for each Level
-_ Place Player 
+	3/13 Tutorial
+	3/13 Week 1
+3/13 Place Player 
 _ Create GirlFriend and Animation for tutorial
 _ Place GirlFriend
 _ Add Notes

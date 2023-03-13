@@ -7,6 +7,15 @@
 namespace fnf::object
 {
 	template <typename T>
+	static inline T* Instantiate(Scene* sc, eLayerType type)
+	{
+		T* gameObj = new T();
+		Scene* scene = sc;
+		scene->AddGameObject(gameObj, type);
+		gameObj->Initialize();
+		return gameObj;
+	}
+	template <typename T>
 	static inline T* Instantiate(eLayerType type)
 	{
 		T* gameObj = new T();

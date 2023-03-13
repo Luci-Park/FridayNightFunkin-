@@ -31,6 +31,6 @@ namespace fnf
 	void StageBG::GetSprite()
 	{
 		mRenderer = AddComponent<SpriteRenderer>();
-		mRenderer->SetImage(L"stageBg", L"..\\FNFAssets\\Art\\24Bit\\Characters\\Backgrounds\\Week1\\stage.bmp");
+		mRenderer->SetImage(L"stageBg", L"..\\FNFAssets\\Art\\24Bit\\Backgrounds\\Week1\\stage.bmp");
 	}
 }
