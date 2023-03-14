@@ -14,6 +14,24 @@ namespace fnf
 	}
 	void Singer::Update()
 	{
+		switch (mCurrState)
+		{
+		case eState::Idle:
+			OnIdle();
+			break;
+		case eState::Up:
+			OnUp();
+			break;
+		case eState::Down:
+			OnDown();
+			break;
+		case eState::Left:
+			OnLeft();
+			break;
+		case eState::Right:
+			OnRight();
+			break;
+		}
 		GameObject::Update();
 	}
 	void Singer::Render(HDC hdc)

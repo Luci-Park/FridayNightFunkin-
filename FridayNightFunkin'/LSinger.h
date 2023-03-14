@@ -24,7 +24,11 @@ namespace fnf
 		void ChangeState(eState state);
 	protected:
 		eState mCurrState;
-	
+		virtual void OnIdle() = 0;
+		virtual void OnUp() = 0;
+		virtual void OnDown() = 0;
+		virtual void OnLeft() = 0;
+		virtual void OnRight() = 0;
 	};
 }
 

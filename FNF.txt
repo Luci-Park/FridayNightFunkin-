@@ -85,6 +85,8 @@ _ Get Stages for each Level
 	3/13 Tutorial
 	3/13 Week 1
 3/13 Place Player 
+_ Place Player Position
+_ Create Fade InOut for Screen Transition
 _ Create GirlFriend and Animation for tutorial
 _ Place GirlFriend
 _ Add Notes
@@ -94,6 +96,7 @@ _ Makes notes disappear according to Inputs
 _ Add effects(note splash, compliments) according to Inputs
 _ Add scores and Stuff(Score Manager)
 _ Make notes and Moves move by reading .json files.
+_ Create Camera Movement
 _ Create Dad Animation
 _ Make week 1
 _ Create Week2 lightning
