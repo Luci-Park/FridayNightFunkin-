@@ -53,8 +53,8 @@ namespace fnf
 		eState GetState() { return mState; }
 		void SetState(eState state) { mState = state; }
 
+	public:
 		Transform* mTransform;
-
 	private:
 		std::vector<Component*> mComponents;
 		eState mState;

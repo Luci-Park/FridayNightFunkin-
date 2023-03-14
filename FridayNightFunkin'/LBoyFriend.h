@@ -15,6 +15,10 @@ namespace fnf
 		virtual void Release() override;
 
 	private:
+		void Move();
+		void BFWriteFile();
+	private:
 		Animator* mAnimator;
+		
 	};
 }
