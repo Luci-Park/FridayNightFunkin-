@@ -15,6 +15,17 @@ namespace fnf::object
 		gameObj->Initialize();
 		return gameObj;
 	}
+
+	template <typename T>
+	static inline T* Instantiate(Scene* sc, Vector2 pos, eLayerType type)
+	{
+		T* gameObj = new T();
+		Scene* scene = sc;
+		scene->AddGameObject(gameObj, type);
+		gameObj->Initialize();
+		gameObj->GameObject::GetComponent<Transform>()->SetPos(pos);
+		return gameObj;
+	}
 	template <typename T>
 	static inline T* Instantiate(eLayerType type)
 	{

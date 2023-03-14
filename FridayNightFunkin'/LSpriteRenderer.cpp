@@ -26,8 +26,8 @@ namespace fnf
 		Transform* tr = GetOwner()->mTransform;
 		Vector2 scale = tr->GetScale();
 		Vector2 pos = tr->GetPos();
-		pos = Camera::CaluatePos(pos);
 		pos += mOffset + mSprite.offset;
+		pos = Camera::CaluatePos(pos);
 		TransparentBlt(hdc, pos.x, pos.y, mSprite.size.x * scale.x , mSprite.size.y * scale.y,
 			mImage->GetHdc(), 0, 0, mSprite.size.x, mSprite.size.y, RGB(255, 0, 255));
 	}

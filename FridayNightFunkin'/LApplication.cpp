@@ -5,7 +5,7 @@
 #include "LCollisionManager.h"
 #include "LCamera.h"
 #include "LResources.h"
-
+#include "LImage.h"
 namespace fnf
 {
 	Application::Application()
@@ -74,7 +74,7 @@ namespace fnf
 		Time::Render(mBackHDC);
 		Input::Render(mBackHDC);
 		SceneManager::Render(mBackHDC);
-		Camera::Render(mBackHDC);
+		//Camera::Render(mBackHDC);
 		SetHalfTransparency(mBackHDC);
 		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHDC, 0, 0, SRCCOPY);
 	}
@@ -93,16 +93,10 @@ namespace fnf
 	}
 	void Application::SetHalfTransparency(HDC hdc)
 	{
-		HDC hdcBuffer = CreateCompatibleDC(hdc);
-		HBRUSH blackBrush = CreateSolidBrush(RGB(0, 0, 0));
-		HBRUSH oldBrush = (HBRUSH)SelectObject(hdcBuffer, blackBrush);
-		Rectangle(hdcBuffer, -1, -1, mWidth + 2, mHeight + 2); 
+		Image* image = Image::CreateEmptyImage(L"InOut", mWidth, mHeight);
+		BitBlt(hdc, 0, 0, mWidth, mHeight, image->GetHdc(), 0, 0, SRCCOPY);
+		//BLENDFUNCTION blend = { AC_SRC_OVER, 0, 255, AC_SRC_ALPHA };
+		//AlphaBlend(hdc, 0, 0, mWidth, mHeight, hdcBuffer, 0, 0, mWidth, mHeight, blend);
 
-		BLENDFUNCTION blend = { AC_SRC_OVER, 0, 255, AC_SRC_ALPHA };
-		AlphaBlend(hdc, 0, 0, mWidth, mHeight, hdcBuffer, 0, 0, mWidth, mHeight, blend);
-
-		SelectObject(hdcBuffer, oldBrush);
-		DeleteObject(blackBrush);
-		DeleteDC(hdcBuffer);
 	}
 }

@@ -6,9 +6,9 @@ extern fnf::Application application;
 
 namespace fnf
 {
-	Image* Image::Create(const std::wstring& name, UINT widht, UINT height)
+	Image* Image::CreateEmptyImage(const std::wstring& name, UINT width, UINT height)
 	{
-		if (widht == 0 || height == 0)
+		if (width == 0 || height == 0)
 			return nullptr;
 
 		Image* image = Resources::Find<Image>(name);
@@ -18,14 +18,14 @@ namespace fnf
 		image = new Image();
 		HDC mainHdc = application.GetHdc();
 
-		image->mBitmap = CreateCompatibleBitmap(mainHdc, widht, height);
+		image->mBitmap = CreateCompatibleBitmap(mainHdc, width, height);
 		
 		image->mHdc = CreateCompatibleDC(mainHdc);
 
 		HBITMAP oldBitmap = (HBITMAP)SelectObject(image->mHdc, image->mBitmap);
 		DeleteObject(oldBitmap);
 
-		image->mWidth = widht;
+		image->mWidth = width;
 		image->mHeight = height;
 
 		image->SetKey(name);

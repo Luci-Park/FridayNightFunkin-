@@ -41,11 +41,11 @@ namespace fnf
 		{
 			mLookPosition
 				= mTarget->GetComponent<Transform>()->GetPos();
-		}
+		}/*
 		else
 		{
 			Clear();
-		}
+		}*/
 
 		mDistance = mLookPosition - (mResolution / 2.0f);
 	}

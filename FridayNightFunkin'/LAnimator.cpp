@@ -108,7 +108,7 @@ namespace fnf
 
 		std::wstring key = fs.parent_path().filename();
 		key += fs.filename();
-		mSpriteSheet = Image::Create(key, width * fileCount, height);
+		mSpriteSheet = Image::CreateEmptyImage(key, width * fileCount, height);
 
 		//
 		int index = 0;

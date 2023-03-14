@@ -13,7 +13,7 @@ namespace fnf
 		GameObject::Initialize();
 	}
 	void Singer::Update()
-	{
+	{/*
 		switch (mCurrState)
 		{
 		case eState::Idle:
@@ -31,7 +31,7 @@ namespace fnf
 		case eState::Right:
 			OnRight();
 			break;
-		}
+		}*/
 		GameObject::Update();
 	}
 	void Singer::Render(HDC hdc)
