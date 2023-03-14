@@ -1,5 +1,6 @@
 #pragma once
 #include <windows.h>
+#include <wingdi.h>
 #include <stdlib.h>
 #include <malloc.h>
 #include <memory.h>

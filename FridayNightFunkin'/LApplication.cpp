@@ -70,13 +70,12 @@ namespace fnf
 
 	void Application::Render()
 	{
-		// clear
 		clear();
-
 		Time::Render(mBackHDC);
 		Input::Render(mBackHDC);
 		SceneManager::Render(mBackHDC);
-		
+		Camera::Render(mBackHDC);
+		SetHalfTransparency(mBackHDC);
 		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHDC, 0, 0, SRCCOPY);
 	}
 	void Application::Release()
@@ -88,8 +87,22 @@ namespace fnf
 	{
 		HBRUSH grayBrush = CreateSolidBrush(RGB(121, 121, 121));
 		HBRUSH oldBrush = (HBRUSH)SelectObject(mBackHDC, grayBrush);
-		Rectangle(mBackHDC, -1, -1, 1602, 902);
+		Rectangle(mBackHDC, -1, -1, mWidth + 2, mHeight + 2);
 		SelectObject(mBackHDC, oldBrush);
 		DeleteObject(grayBrush);
+	}
+	void Application::SetHalfTransparency(HDC hdc)
+	{
+		HDC hdcBuffer = CreateCompatibleDC(hdc);
+		HBRUSH blackBrush = CreateSolidBrush(RGB(0, 0, 0));
+		HBRUSH oldBrush = (HBRUSH)SelectObject(hdcBuffer, blackBrush);
+		Rectangle(hdcBuffer, -1, -1, mWidth + 2, mHeight + 2); 
+
+		BLENDFUNCTION blend = { AC_SRC_OVER, 0, 255, AC_SRC_ALPHA };
+		AlphaBlend(hdc, 0, 0, mWidth, mHeight, hdcBuffer, 0, 0, mWidth, mHeight, blend);
+
+		SelectObject(hdcBuffer, oldBrush);
+		DeleteObject(blackBrush);
+		DeleteDC(hdcBuffer);
 	}
 }

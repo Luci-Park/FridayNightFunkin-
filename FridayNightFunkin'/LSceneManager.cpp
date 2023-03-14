@@ -2,20 +2,20 @@
 #include "LCollisionManager.h"
 #include "LCamera.h"
 #include "LTutorialScene.h"
-
+#include "LSplashScene.h"
 namespace fnf
 {	
 	//SceneManager scsene;
 	//SceneManager* scsene = new SceneManager();
 	std::vector<Scene*> SceneManager::mScenes = {};
 	Scene* SceneManager::mActiveScene = nullptr;
-
+	int SceneManager::sceneNum = 0;
 	void SceneManager::Initialize()
 	{
 		mScenes.resize((UINT)eSceneType::Size);
 
 		mScenes[(UINT)eSceneType::Tutorial] = new TutorialScene();
-
+		mScenes[(UINT)eSceneType::Splash1] = new SplashScene();
 		for ( Scene* scene : mScenes )
 		{
 			if (scene == nullptr)
@@ -57,15 +57,18 @@ namespace fnf
 	void SceneManager::LoadScene(eSceneType type)
 	{
 		Camera::Clear();
-
-		// �����
 		mActiveScene->OnExit();
-		
 		CollisionManager::Clear();
-		//������
 		mActiveScene = mScenes[(UINT)type];
-		mActiveScene->OnEnter();
-
-		
+		Camera::StartFadeIn();
+		mActiveScene->OnEnter();		
+	}
+	void SceneManager::TempSceneChange()
+	{
+		if (sceneNum == 0)
+			LoadScene(eSceneType::Splash1);
+		else
+			LoadScene(eSceneType::Tutorial);
+		sceneNum = (sceneNum + 1) % 2;
 	}
 }

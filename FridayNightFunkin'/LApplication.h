@@ -21,10 +21,10 @@ namespace fnf
 		UINT GetWidth() { return mWidth; }
 		UINT GetHeight() { return mHeight; }
 		Vector2 GetCenter() { return Vector2((float)mWidth / 2, (float)mHeight / 2); }
-
+		
 	private:
 		void clear();
-
+		void SetHalfTransparency(HDC hdc);
 	private:
 		HWND mHwnd;
 		HDC mHdc;

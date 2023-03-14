@@ -1,5 +1,6 @@
 #include "LScene.h"
 #include "LSceneManager.h"
+#include "LInput.h"
 
 
 namespace fnf
@@ -23,6 +24,10 @@ namespace fnf
 		for (Layer& layer : mLayers)
 		{
 			layer.Update();
+		}
+		if (Input::GetKeyState(eKeyCode::N) == eKeyState::Down)
+		{
+			SceneManager::TempSceneChange();
 		}
 	}
 	void Scene::Render(HDC hdc)

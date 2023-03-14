@@ -160,6 +160,12 @@
     <ClInclude Include="LStageBG.h">
       <Filter>Contents\Background</Filter>
     </ClInclude>
+    <ClInclude Include="CommonInclude.h">
+      <Filter>Engine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="LSplashScene.h">
+      <Filter>Contents\Scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FridayNightFunkin%27.rc">
@@ -249,6 +255,9 @@
     </ClCompile>
     <ClCompile Include="LStageBG.cpp">
       <Filter>Contents\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="LSplashScene.cpp">
+      <Filter>Contents\Scene</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

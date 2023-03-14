@@ -128,10 +128,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CommonInclude.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="FridayNightFunkin%27.h" />
     <ClInclude Include="LBoyfriend.h" />
     <ClInclude Include="LSinger.h" />
+    <ClInclude Include="LSplashScene.h" />
     <ClInclude Include="LSpriteRenderer.h" />
     <ClInclude Include="LStageBG.h" />
     <ClInclude Include="LTutorialScene.h" />
@@ -164,6 +166,7 @@
   <ItemGroup>
     <ClCompile Include="LBoyfriend.cpp" />
     <ClCompile Include="LSinger.cpp" />
+    <ClCompile Include="LSplashScene.cpp" />
     <ClCompile Include="LSpriteRenderer.cpp" />
     <ClCompile Include="LStageBG.cpp" />
     <ClCompile Include="LTutorialScene.cpp" />
